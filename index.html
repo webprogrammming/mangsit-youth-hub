@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html class="light scroll-smooth" lang="id">
+<html class="light scroll-smooth notranslate" translate="no" lang="id">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    
+    <meta name="google" content="notranslate" />
     
     <title>Mangsit Youth Hub - Local Services & Tourism in Senggigi</title>
     <meta name="description" content="Mangsit Youth Hub adalah platform pemberdayaan lokal penyedia layanan sewa motor, surfboard, alat snorkeling, dan laundry di Mangsit, Senggigi." />
@@ -25,6 +27,16 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     
     <style>
+        /* 3. OPTIMALISASI CSS: Mencegah teks overlap & menghilangkan efek biru saat klik di HP */
+        [data-i18n] {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        a, button {
+            -webkit-tap-highlight-color: transparent;
+        }
+
         body {
             opacity: 0;
             transition: opacity 0.3s ease-in;
@@ -130,7 +142,7 @@
     </nav>
 
     <header class="relative w-full h-[70vh] min-h-[500px] flex items-center bg-surface-container-high"
-        style="background-image: url('img/banner.png'); background-size: cover; background-position: center;">
+        style="background-image: url('img/Mangsit Youth Hub Services Banner.png'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30"></div>
         <div class="relative z-10 w-full max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop flex flex-col items-start gap-stack-md text-white">
             <h1 class="font-headline-lg-mobile text-3xl md:text-5xl font-extrabold max-w-3xl text-on-primary leading-tight" data-i18n="hero_title">
@@ -200,10 +212,10 @@
         <h2 class="font-headline-lg text-3xl font-bold text-primary mb-stack-lg text-center" data-i18n="service_title">
             Layanan Presisi Pulau</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-            <div onclick="openModal('1')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
+            <div onclick="openModal('1')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
                 <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 z-10 transition-colors"></div>
                 <div class="h-48 relative bg-gray-200" style="background-image: url('img/nmax.png'); background-size: cover; background-position: center;"></div>
-                <div class="p-6 flex flex-col gap-2">
+                <div class="p-6 flex flex-col gap-2 flex-grow">
                     <div class="flex items-center justify-between">
                         <h3 class="font-headline-md text-xl font-bold text-on-surface" data-i18n="srv_1_title">Sewa Motor</h3>
                         <span class="material-symbols-outlined text-primary">two_wheeler</span>
@@ -212,10 +224,10 @@
                 </div>
             </div>
 
-            <div onclick="openModal('2')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
+            <div onclick="openModal('2')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
                 <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 z-10 transition-colors"></div>
                 <div class="h-48 relative bg-gray-200" style="background-image: url('img/papan.png'); background-size: cover; background-position: center;"></div>
-                <div class="p-6 flex flex-col gap-2">
+                <div class="p-6 flex flex-col gap-2 flex-grow">
                     <div class="flex items-center justify-between">
                         <h3 class="font-headline-md text-xl font-bold text-on-surface" data-i18n="srv_2_title">Papan Selancar</h3>
                         <span class="material-symbols-outlined text-primary">surfing</span>
@@ -224,10 +236,10 @@
                 </div>
             </div>
 
-            <div onclick="openModal('3')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
+            <div onclick="openModal('3')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
                 <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 z-10 transition-colors"></div>
                 <div class="h-48 relative bg-gray-200" style="background-image: url('img/selam.png'); background-size: cover; background-position: center;"></div>
-                <div class="p-6 flex flex-col gap-2">
+                <div class="p-6 flex flex-col gap-2 flex-grow">
                     <div class="flex items-center justify-between">
                         <h3 class="font-headline-md text-xl font-bold text-on-surface" data-i18n="srv_3_title">Perlengkapan Renang</h3>
                         <span class="material-symbols-outlined text-primary">scuba_diving</span>
@@ -236,10 +248,10 @@
                 </div>
             </div>
 
-            <div onclick="openModal('4')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
+            <div onclick="openModal('4')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
                 <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 z-10 transition-colors"></div>
                 <div class="h-48 relative bg-gray-200" style="background-image: url('img/kain.png'); background-size: cover; background-position: center;"></div>
-                <div class="p-6 flex flex-col gap-2">
+                <div class="p-6 flex flex-col gap-2 flex-grow">
                     <div class="flex items-center justify-between">
                         <h3 class="font-headline-md text-xl font-bold text-on-surface" data-i18n="srv_4_title">Kain Pantai</h3>
                         <span class="material-symbols-outlined text-primary">beach_access</span>
@@ -276,21 +288,21 @@
         <div class="max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop">
             <h2 class="font-headline-lg text-3xl font-bold text-primary text-center mb-10" data-i18n="process_title">Prosedur Pemesanan Mudah</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="flex flex-col items-center gap-4 bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+                <div class="flex flex-col items-center gap-4 bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant/20 h-full">
                     <div class="w-16 h-16 rounded-full bg-blue-100 text-primary flex items-center justify-center">
                         <span class="material-symbols-outlined text-3xl">qr_code_scanner</span>
                     </div>
                     <h3 class="font-headline-md text-lg font-bold" data-i18n="proc_1_title">1. Pilih / Pesan</h3>
                     <p class="text-sm text-on-surface-variant" data-i18n="proc_1_desc">Pilih layanan yang Anda inginkan dan hubungi kami melalui WhatsApp.</p>
                 </div>
-                <div class="flex flex-col items-center gap-4 bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+                <div class="flex flex-col items-center gap-4 bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant/20 h-full">
                     <div class="w-16 h-16 rounded-full bg-blue-100 text-primary flex items-center justify-center">
                         <span class="material-symbols-outlined text-3xl">verified</span>
                     </div>
                     <h3 class="font-headline-md text-lg font-bold" data-i18n="proc_2_title">2. Verifikasi Data</h3>
                     <p class="text-sm text-on-surface-variant" data-i18n="proc_2_desc">Kami memverifikasi kebutuhan Anda untuk memastikan standar keselamatan dan keamanan penyewaan.</p>
                 </div>
-                <div class="flex flex-col items-center gap-4 bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant/20">
+                <div class="flex flex-col items-center gap-4 bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant/20 h-full">
                     <div class="w-16 h-16 rounded-full bg-blue-100 text-primary flex items-center justify-center">
                         <span class="material-symbols-outlined text-3xl">handshake</span>
                     </div>
@@ -441,7 +453,7 @@
                 'trust_2': 'Perawatan Rutin',
                 'trust_3': 'Dukungan 24/7',
                 
-                // Tentang Kami - Branding Persuasif
+                // Tentang Kami
                 'about_title': 'Lebih dari Sekadar Layanan',
                 'about_desc_1': 'Mangsit Youth Hub adalah gerakan pemberdayaan ekonomi lokal berbasis teknologi. Lahir dari inisiatif pemuda Dusun Mangsit, kami hadir untuk mengangkat potensi para pelaku usaha jasa di lingkungan kami agar mampu beradaptasi, bersaing, dan menjangkau pasar global.',
                 'about_desc_2': 'Melalui platform ini, kami menjembatani Anda dengan layanan lokal yang otentik, aman, dan berkualitas tinggi. Setiap pesanan Anda bukanlah sekadar transaksi, melainkan dukungan langsung untuk menghidupkan perekonomian warga setempat dan mendorong digitalisasi pariwisata di Senggigi. Bersama, kita ciptakan pariwisata yang inklusif dan berkelanjutan.',
@@ -500,7 +512,7 @@
                 'trust_2': 'Routine Maintenance',
                 'trust_3': '24/7 Support',
                 
-                // About Us - Persuasive Branding
+                // About Us
                 'about_title': 'More Than Just a Service',
                 'about_desc_1': 'Mangsit Youth Hub is a technology-driven movement for local economic empowerment. Born from the youth of Mangsit Village, our mission is to elevate local service providers, helping them adapt, thrive, and reach a global market.',
                 'about_desc_2': 'Through this platform, we bridge the gap between travelers and authentic, safe, and high-quality local services. Every booking you make is more than just a transaction—it is direct support that fuels the local economy and drives the digitalization of tourism in Senggigi. Together, we create an inclusive and sustainable tourism ecosystem.',
@@ -550,12 +562,12 @@
         };
 
         // ==========================================
-        // 3. FITUR BAHASA MENYIMPAN PREFERENSI (LocalStorage)
+        // Fungsi Mengubah Bahasa & Simpan ke LocalStorage
         // ==========================================
         function changeLanguage(lang) {
             document.getElementById('lang-switch').value = lang;
             document.getElementById('lang-switch-mobile').value = lang;
-            document.documentElement.lang = lang; // Update atribut HTML lang untuk SEO
+            document.documentElement.lang = lang; // Update atribut HTML lang
 
             // Simpan preferensi bahasa ke Local Storage
             localStorage.setItem('preferredLanguage', lang);
