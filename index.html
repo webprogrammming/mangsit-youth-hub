@@ -4,29 +4,39 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Mangsit Youth Concierge</title>
+    
+    <title>Mangsit Youth Hub - Local Services & Tourism in Senggigi</title>
+    <meta name="description" content="Mangsit Youth Hub adalah platform pemberdayaan lokal penyedia layanan sewa motor, surfboard, alat snorkeling, dan laundry di Mangsit, Senggigi." />
+    <meta name="keywords" content="sewa motor senggigi, surfboard mangsit, snorkeling lombok, laundry senggigi, mangsit youth hub" />
+    <meta name="author" content="Mangsit Youth Hub" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mangsityouthhub.com/" />
+    <meta property="og:title" content="Mangsit Youth Hub - Senggigi Local Services" />
+    <meta property="og:description" content="Solusi lengkap liburan Anda di Senggigi. Sewa motor, papan selancar, dan layanan lokal terpercaya." />
+    <meta property="og:image" content="img/banner.png" />
+
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
-        rel="stylesheet" />
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
     <style>
         body {
             opacity: 0;
             transition: opacity 0.3s ease-in;
         }
-
         html.loaded body {
             opacity: 1;
         }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
     </style>
+
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -69,11 +79,6 @@
             }
         }
     </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
 </head>
 
 <body class="bg-background text-on-background antialiased" onload="document.documentElement.classList.add('loaded')">
@@ -107,7 +112,7 @@
                     <option value="id">ID</option>
                     <option value="en">EN</option>
                 </select>
-                <button class="text-primary" id="mobile-menu-btn">
+                <button class="text-primary" id="mobile-menu-btn" aria-label="Toggle Mobile Menu">
                     <span class="material-symbols-outlined text-3xl">menu</span>
                 </button>
             </div>
@@ -125,7 +130,7 @@
     </nav>
 
     <header class="relative w-full h-[70vh] min-h-[500px] flex items-center bg-surface-container-high"
-        style="background-image: url('img/banner.png'); background-size: cover; background-position: center;">
+        style="background-image: url('img/Mangsit Youth Hub Services Banner.png'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30"></div>
         <div class="relative z-10 w-full max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop flex flex-col items-start gap-stack-md text-white">
             <h1 class="font-headline-lg-mobile text-3xl md:text-5xl font-extrabold max-w-3xl text-on-primary leading-tight" data-i18n="hero_title">
@@ -158,7 +163,7 @@
         </div>
     </div>
 
-<section id="tentang" class="py-stack-lg max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop mt-16 scroll-mt-24">
+    <section id="tentang" class="py-stack-lg max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop mt-16 scroll-mt-24">
         <div class="flex flex-col md:flex-row gap-12 items-center">
             <div class="w-full md:w-1/2 relative">
                 <div class="absolute -inset-4 bg-primary/5 rounded-3xl transform rotate-2 -z-10"></div>
@@ -247,7 +252,7 @@
 
     <div id="service-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-4 py-8 bg-black/60 backdrop-blur-sm transition-opacity">
         <div class="bg-surface rounded-2xl max-w-md w-full p-8 shadow-2xl relative flex flex-col items-center text-center">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-on-surface-variant hover:text-secondary transition-colors">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-on-surface-variant hover:text-secondary transition-colors" aria-label="Tutup Modal">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
 
@@ -352,7 +357,7 @@
         <div class="max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
                 <div class="flex flex-col gap-4">
-                    <div class="font-headline-md text-2xl font-bold text-white">Mangsit Youth</div>
+                    <div class="font-headline-md text-2xl font-bold text-white">Mangsit Youth Hub</div>
                     <p class="text-sm text-gray-300 leading-relaxed" data-i18n="footer_desc">Solusi lengkap liburan Anda di Senggigi. Kami menghubungkan Anda dengan layanan lokal terbaik berstandar profesional.</p>
                     <div class="flex gap-4 mt-2">
                         <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><span class="material-symbols-outlined text-sm">photo_camera</span> </a>
@@ -396,8 +401,9 @@
                 </div>
             </div>
             <hr class="border-gray-600 mb-6" />
+            
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-                <div class="text-center md:text-left">© 2024 Mangsit Youth Concierge. Island Precision, Local Heart.</div>
+                <div class="text-center md:text-left">© 2024 Mangsit Youth Hub. Island Precision, Local Heart.</div>
                 <div class="flex gap-6">
                     <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
                     <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
@@ -421,7 +427,7 @@
             });
         });
 
-        // Kamus Bahasa (i18n) - Diperbaiki Sintaksnya (Penambahan Koma)
+        // Kamus Bahasa (i18n)
         const translations = {
             'id': {
                 'nav_services': 'Layanan',
@@ -434,11 +440,13 @@
                 'trust_1': 'Mitra Terverifikasi',
                 'trust_2': 'Perawatan Rutin',
                 'trust_3': 'Dukungan 24/7',
+                
+                // Tentang Kami - Branding Persuasif
                 'about_title': 'Lebih dari Sekadar Layanan',
                 'about_desc_1': 'Mangsit Youth Hub adalah gerakan pemberdayaan ekonomi lokal berbasis teknologi. Lahir dari inisiatif pemuda Dusun Mangsit, kami hadir untuk mengangkat potensi para pelaku usaha jasa di lingkungan kami agar mampu beradaptasi, bersaing, dan menjangkau pasar global.',
                 'about_desc_2': 'Melalui platform ini, kami menjembatani Anda dengan layanan lokal yang otentik, aman, dan berkualitas tinggi. Setiap pesanan Anda bukanlah sekadar transaksi, melainkan dukungan langsung untuk menghidupkan perekonomian warga setempat dan mendorong digitalisasi pariwisata di Senggigi. Bersama, kita ciptakan pariwisata yang inklusif dan berkelanjutan.',
+                
                 'service_title': 'Layanan Presisi Pulau',
-
                 'srv_1_title': 'Sewa Motor',
                 'srv_1_desc': 'Skuter handal, terawat, dan diantar langsung ke vila Anda.',
                 'srv_1_price': 'Mulai 75k/Hari',
@@ -473,6 +481,8 @@
                 'contact_desc': 'Punya pertanyaan khusus atau ingin berkonsultasi mengenai itinerary Anda? Tim kami siap sedia membalas pesan Anda.',
                 'btn_whatsapp': 'Chat WhatsApp',
                 'btn_map': 'Buka di Maps',
+                
+                // Footer
                 'footer_desc': 'Solusi lengkap liburan Anda di Senggigi. Kami menghubungkan Anda dengan layanan lokal terbaik berstandar profesional.',
                 'footer_quick_links': 'Tautan Cepat',
                 'footer_services': 'Layanan Kami',
@@ -489,11 +499,13 @@
                 'trust_1': 'Verified Partners',
                 'trust_2': 'Routine Maintenance',
                 'trust_3': '24/7 Support',
+                
+                // About Us - Persuasive Branding
                 'about_title': 'More Than Just a Service',
                 'about_desc_1': 'Mangsit Youth Hub is a technology-driven movement for local economic empowerment. Born from the youth of Mangsit Village, our mission is to elevate local service providers, helping them adapt, thrive, and reach a global market.',
                 'about_desc_2': 'Through this platform, we bridge the gap between travelers and authentic, safe, and high-quality local services. Every booking you make is more than just a transaction—it is direct support that fuels the local economy and drives the digitalization of tourism in Senggigi. Together, we create an inclusive and sustainable tourism ecosystem.',
+                
                 'service_title': 'Island Precision Services',
-
                 'srv_1_title': 'Motorbike Rental',
                 'srv_1_desc': 'Reliable, well-maintained scooters delivered directly to your villa.',
                 'srv_1_price': 'From 75k/Day',
@@ -528,6 +540,8 @@
                 'contact_desc': 'Have specific questions or want to consult about your itinerary? Our team is ready to reply to your message.',
                 'btn_whatsapp': 'Chat WhatsApp',
                 'btn_map': 'Open in Maps',
+                
+                // Footer
                 'footer_desc': 'Your complete holiday solution in Senggigi. We connect you with the best local services with professional standards.',
                 'footer_quick_links': 'Quick Links',
                 'footer_services': 'Our Services',
@@ -536,11 +550,15 @@
         };
 
         // ==========================================
-        // Fungsi Mengubah Bahasa
+        // 3. FITUR BAHASA MENYIMPAN PREFERENSI (LocalStorage)
         // ==========================================
         function changeLanguage(lang) {
             document.getElementById('lang-switch').value = lang;
             document.getElementById('lang-switch-mobile').value = lang;
+            document.documentElement.lang = lang; // Update atribut HTML lang untuk SEO
+
+            // Simpan preferensi bahasa ke Local Storage
+            localStorage.setItem('preferredLanguage', lang);
 
             const elements = document.querySelectorAll('[data-i18n]');
             elements.forEach(el => {
@@ -549,36 +567,40 @@
                     el.textContent = translations[lang][key];
                 }
             });
-            // Update modal text secara realtime jika modal sedang terbuka
+            
+            // Update teks modal secara realtime jika modal sedang terbuka
             if (currentServiceId && !document.getElementById('service-modal').classList.contains('hidden')) {
                 document.getElementById('modal-title').textContent = translations[lang][`srv_${currentServiceId}_title`];
                 document.getElementById('modal-desc').textContent = translations[lang][`modal_desc_${currentServiceId}`];
             }
         }
 
+        // Cek LocalStorage saat halaman pertama kali dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'id'; // Default ke ID jika belum ada
+            changeLanguage(savedLang);
+        });
+
         // ==========================================
-        // FITUR MODAL & PEMESANAN WHATSAPP YANG DISEDERHANAKAN
+        // FITUR MODAL & PEMESANAN WHATSAPP
         // ==========================================
         let currentServiceId = '';
-        const ADMIN_WA_NUMBER = '6285959202456'; // Nomor WA Admin terpusat
+        const ADMIN_WA_NUMBER = '6285959202456'; 
 
         function openModal(serviceId) {
             const currentLang = document.getElementById('lang-switch').value;
-            currentServiceId = serviceId; // Simpan ID layanan yang diklik
+            currentServiceId = serviceId; 
 
             const modalTitle = document.getElementById('modal-title');
             const modalDesc = document.getElementById('modal-desc');
             const modalIcon = document.getElementById('modal-icon');
 
-            // Atur atribut i18n agar sinkron
             modalTitle.setAttribute('data-i18n', `srv_${serviceId}_title`);
             modalDesc.setAttribute('data-i18n', `modal_desc_${serviceId}`);
 
-            // Isi teks awal sesuai bahasa
             modalTitle.textContent = translations[currentLang][`srv_${serviceId}_title`];
             modalDesc.textContent = translations[currentLang][`modal_desc_${serviceId}`];
 
-            // Ganti Ikon berdasarkan layanan yang dipilih
             const icons = {
                 '1': 'two_wheeler',
                 '2': 'surfing',
@@ -587,14 +609,13 @@
             };
             modalIcon.textContent = icons[serviceId] || 'info';
 
-            // Tampilkan Modal
             document.getElementById('service-modal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Nonaktifkan scroll belakang
+            document.body.style.overflow = 'hidden'; 
         }
 
         function closeModal() {
             document.getElementById('service-modal').classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Aktifkan scroll kembali
+            document.body.style.overflow = 'auto'; 
         }
 
         function sendWhatsApp() {
@@ -602,18 +623,14 @@
             const serviceName = translations[currentLang][`srv_${currentServiceId}_title`];
             let message = '';
 
-            // Format Pesan
             if (currentLang === 'id') {
                 message = `Halo Mangsit Youth Hub,%0A%0ASaya ingin bertanya lebih lanjut mengenai layanan *${serviceName}*. Mohon informasi detailnya. Terima kasih.`;
             } else {
                 message = `Hello Mangsit Youth Hub,%0A%0AI would like to ask for more information or book the *${serviceName}* service. Please provide further details. Thank you.`;
             }
 
-            // Arahkan ke WhatsApp API
             const waUrl = `https://wa.me/${ADMIN_WA_NUMBER}?text=${message}`;
             window.open(waUrl, '_blank');
-
-            // Tutup modal setelah menekan tombol
             closeModal();
         }
     </script>
