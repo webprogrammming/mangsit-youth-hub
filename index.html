@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="google" content="notranslate" />
     
-    <title>Mangsit Youth Hub - Premium Local Services in Senggigi</title>
+    <title>Mangsit Youth Hub - Premium Local Services & Tourism</title>
     <link rel="icon" type="image/png" href="img/Yout-Hub-Logo.png">
 
     <meta name="description" content="Mangsit Youth Hub adalah platform penyedia layanan wisata premium, sewa motor, transport, surfboard, dan alat snorkeling di Mangsit, Senggigi." />
@@ -19,47 +19,26 @@
     <meta property="og:description" content="Solusi lengkap liburan Anda di Senggigi. Sewa motor, transport, dan layanan lokal terpercaya berstandar internasional." />
     <meta property="og:image" content="img/Mangsit Youth Hub Services Banner.png" />
 
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <style>
-        [data-i18n] { word-wrap: break-word; overflow-wrap: break-word; }
-        a, button { -webkit-tap-highlight-color: transparent; }
-        body { opacity: 0; transition: opacity 0.5s ease-in; background-color: #FAFCFF; }
-        html.loaded body { opacity: 1; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        .icon-filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        
-        /* Custom Scrollbar Khusus Konten Modal */
-        #modal-scroll-area::-webkit-scrollbar { width: 6px; }
-        #modal-scroll-area::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 10px; }
-        
-        /* FAQ Accordion Styling */
-        details > summary { list-style: none; cursor: pointer; }
-        details > summary::-webkit-details-marker { display: none; }
-        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
-        @keyframes sweep { 0% {opacity: 0; transform: translateY(-10px)} 100% {opacity: 1; transform: translateY(0)} }
-    </style>
-
-    <script id="tailwind-config">
+    <script>
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#0A2540",
-                        "secondary": "#E05915", 
-                        "background": "#FAFCFF",
-                        "surface": "#FFFFFF",
-                        "surface-variant": "#F1F5F9",
-                        "on-surface": "#1E293B",
-                        "on-surface-variant": "#475569",
-                        "outline-variant": "#E2E8F0",
+                        brandDark: '#0A2540',
+                        brandAccent: '#E05915',
+                        brandMuted: '#6B7280',
+                        brandLight: '#F8FAFC',
+                        surfaceVariant: '#F1F5F9'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        body: ['Be Vietnam Pro', 'sans-serif']
                     },
                     boxShadow: {
                         'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
@@ -69,741 +48,791 @@
             }
         }
     </script>
+    <style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; opacity: 0; transition: opacity 0.5s ease-in; }
+        html.loaded body { opacity: 1; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        [data-i18n] { word-wrap: break-word; overflow-wrap: break-word; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .icon-filled { font-variation-settings: 'FILL' 1, 'wght' 400; }
+        
+        /* Animasi FAQ */
+        details > summary { list-style: none; cursor: pointer; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep { 0% {opacity: 0; transform: translateY(-10px)} 100% {opacity: 1; transform: translateY(0)} }
+    </style>
 </head>
 
-<body class="bg-background text-on-surface antialiased font-['Be_Vietnam_Pro']" onload="document.documentElement.classList.add('loaded')">
-    
-    <nav class="bg-white/80 w-full top-0 sticky backdrop-blur-lg border-b border-outline-variant/50 z-50 transition-all">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-24">
-            <a href="index.html" class="flex items-center gap-3 font-['Plus_Jakarta_Sans'] text-2xl font-extrabold text-primary hover:opacity-80 transition-opacity">
-                <img src="img/Yout-Hub-Logo.png" alt="Mangsit Youth Logo" class="h-12 w-auto object-contain" loading="eager" />
-                Mangsit Youth
+<body class="bg-brandLight text-brandDark antialiased" onload="document.documentElement.classList.add('loaded')">
+
+    <header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-all">
+        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <img src="img/Yout-Hub-Logo.png" alt="Logo" class="h-10 md:h-12 w-auto object-contain">
+                <span class="text-lg md:text-xl font-bold tracking-tight text-brandDark hidden sm:block">Mangsit <span class="text-brandAccent">Youth Hub</span></span>
             </a>
-
-            <div class="hidden md:flex items-center gap-10 text-sm font-semibold text-on-surface-variant">
-                <a class="hover:text-secondary transition-colors" href="#layanan" data-i18n="nav_services">Layanan</a>
-                <a class="hover:text-secondary transition-colors" href="#tentang" data-i18n="nav_about">Tentang Kami</a>
-                <a class="hover:text-secondary transition-colors" href="#testimoni" data-i18n="nav_reviews">Ulasan</a>
-                <a class="hover:text-secondary transition-colors" href="#faq" data-i18n="nav_faq">FAQ</a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-brandMuted">
+                <a class="hover:text-brandAccent transition-colors" href="#layanan" data-i18n="nav_services">Layanan</a>
+                <a class="hover:text-brandAccent transition-colors" href="#tentang" data-i18n="nav_about">Tentang</a>
+                <a class="hover:text-brandAccent transition-colors" href="#testimoni" data-i18n="nav_reviews">Ulasan</a>
+                <a class="hover:text-brandAccent transition-colors" href="#faq" data-i18n="nav_faq">FAQ</a>
             </div>
 
-            <div class="hidden md:flex items-center gap-6">
-                <select id="lang-switch" onchange="changeLanguage(this.value)" class="bg-surface-variant text-primary text-sm font-bold border-none rounded-lg cursor-pointer focus:ring-0 py-2 pl-3 pr-8">
-                    <option value="id">ID</option>
-                    <option value="en">EN</option>
-                </select>
-                <a href="#layanan" class="bg-primary text-white font-semibold px-6 py-3 rounded-full hover:bg-secondary transition-colors shadow-lg active:scale-95" data-i18n="btn_book_now">
-                    Pesan Sekarang
-                </a>
-            </div>
+            <div class="flex items-center gap-2 md:gap-4">
+                <div class="relative hidden sm:block">
+                    <select id="currency-switch" onchange="changeCurrency(this.value)" class="appearance-none rounded-xl border border-slate-200 bg-white py-2 pl-3 pr-8 text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-brandAccent cursor-pointer">
+                        <option value="IDR">IDR</option>
+                        <option value="USD">USD</option>
+                        <option value="AUD">AUD</option>
+                    </select>
+                    <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-sm">expand_more</span>
+                </div>
 
-            <div class="md:hidden flex items-center gap-4">
-                <select id="lang-switch-mobile" onchange="changeLanguage(this.value)" class="bg-surface-variant text-primary text-sm font-bold border-none rounded-lg cursor-pointer py-2 pl-3 pr-8">
-                    <option value="id">ID</option>
-                    <option value="en">EN</option>
-                </select>
-                <button class="text-primary p-2 bg-surface-variant rounded-full" id="mobile-menu-btn" aria-label="Toggle Mobile Menu">
-                    <span class="material-symbols-outlined text-2xl block">menu</span>
+                <div class="relative">
+                    <select id="lang-switch" onchange="changeLanguage(this.value)" class="appearance-none rounded-xl border border-slate-200 bg-white py-2 pl-3 pr-8 text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-brandAccent cursor-pointer">
+                        <option value="id">🇮🇩 ID</option>
+                        <option value="en">🇬🇧 EN</option>
+                    </select>
+                    <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-sm">expand_more</span>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-brandDark bg-surfaceVariant rounded-xl">
+                    <span class="material-symbols-outlined block">menu</span>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-outline-variant absolute w-full left-0 top-24 flex flex-col shadow-soft">
-            <a class="p-5 border-b border-outline-variant/30 text-on-surface-variant font-semibold mobile-link" href="#layanan" data-i18n="nav_services">Layanan</a>
-            <a class="p-5 border-b border-outline-variant/30 text-on-surface-variant font-semibold mobile-link" href="#tentang" data-i18n="nav_about">Tentang Kami</a>
-            <a class="p-5 border-b border-outline-variant/30 text-on-surface-variant font-semibold mobile-link" href="#testimoni" data-i18n="nav_reviews">Ulasan</a>
-            <a class="p-5 text-center bg-primary text-white font-semibold mobile-link" href="#layanan" data-i18n="btn_book_now">Pesan Sekarang</a>
-        </div>
-    </nav>
-
-    <header class="relative w-full lg:h-[80vh] min-h-[600px] flex items-center justify-center pt-10 pb-20">
-        <div class="absolute inset-x-4 inset-y-0 md:inset-x-12 rounded-[2rem] overflow-hidden shadow-soft">
-            <div class="absolute inset-0 bg-primary/40 mix-blend-multiply z-10"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent z-10"></div>
-            <img src="img/Mangsit Youth Hub Services Banner.png" alt="Senggigi Vibe" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        
-        <div class="relative z-20 w-full max-w-5xl mx-auto px-8 md:px-12 text-center flex flex-col items-center">
-            <span class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-sm font-bold tracking-wider mb-6 border border-white/30 uppercase" data-i18n="hero_badge">
-                Island Precision, Local Heart
-            </span>
-            <h1 class="font-['Plus_Jakarta_Sans'] text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6" data-i18n="hero_title">
-                Standar Baru Liburan Anda di Senggigi.
-            </h1>
-            <p class="text-lg md:text-xl text-gray-200 max-w-2xl font-light mb-10" data-i18n="hero_desc">
-                Menghubungkan Anda dengan layanan lokal otentik melalui standar keamanan dan profesionalisme kelas dunia.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <a href="#layanan" class="bg-secondary text-white font-bold px-8 py-4 rounded-full shadow-floating hover:bg-[#c94a0b] transition-all active:scale-95 flex items-center justify-center gap-2">
-                    <span data-i18n="btn_explore">Lihat Layanan</span>
-                    <span class="material-symbols-outlined">arrow_downward</span>
-                </a>
-                <a href="#tentang" class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold px-8 py-4 rounded-full hover:bg-white/20 transition-all flex items-center justify-center" data-i18n="nav_about">
-                    Pelajari Lebih Lanjut
-                </a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 absolute w-full left-0 top-20 flex flex-col shadow-soft">
+            <a class="p-5 border-b border-slate-100 text-brandMuted font-semibold mobile-link" href="#layanan" data-i18n="nav_services">Layanan</a>
+            <a class="p-5 border-b border-slate-100 text-brandMuted font-semibold mobile-link" href="#tentang" data-i18n="nav_about">Tentang</a>
+            <a class="p-5 border-b border-slate-100 text-brandMuted font-semibold mobile-link" href="#testimoni" data-i18n="nav_reviews">Ulasan</a>
+            <div class="p-5 flex gap-4">
+                <span class="text-brandMuted font-semibold text-sm">Mata Uang:</span>
+                <select id="currency-switch-mobile" onchange="changeCurrency(this.value)" class="border border-slate-200 rounded p-1 text-sm font-bold">
+                    <option value="IDR">IDR</option><option value="USD">USD</option><option value="AUD">AUD</option>
+                </select>
             </div>
         </div>
     </header>
 
-    <div class="max-w-6xl mx-auto px-6 relative z-30 -mt-16 md:-mt-12 mb-20">
-        <div class="bg-white rounded-2xl shadow-soft border border-outline-variant/30 p-6 flex flex-wrap justify-center md:justify-between gap-6 md:gap-4 text-sm md:text-base font-bold text-primary">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600"><span class="material-symbols-outlined icon-filled">verified_user</span></div>
-                <span data-i18n="trust_1">Mitra Terverifikasi</span>
+    <main>
+        <section class="relative w-full lg:h-[85vh] min-h-[600px] flex items-center justify-center pt-6 pb-20 px-4 sm:px-6 lg:px-8">
+            <div class="absolute inset-x-4 inset-y-0 md:inset-x-8 lg:inset-x-12 rounded-[2rem] overflow-hidden shadow-soft">
+                <div class="absolute inset-0 bg-brandDark/40 mix-blend-multiply z-10"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-brandDark/90 via-brandDark/20 to-transparent z-10"></div>
+                <img src="img/Mangsit Youth Hub Services Banner.png" alt="Senggigi Vibe" class="absolute inset-0 w-full h-full object-cover" />
             </div>
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600"><span class="material-symbols-outlined icon-filled">health_and_safety</span></div>
-                <span data-i18n="trust_2">Keamanan Prioritas</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-secondary"><span class="material-symbols-outlined icon-filled">support_agent</span></div>
-                <span data-i18n="trust_3">Dukungan 24/7</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600"><span class="material-symbols-outlined icon-filled">thumb_up</span></div>
-                <span data-i18n="trust_4">Kualitas Premium</span>
-            </div>
-        </div>
-    </div>
-
-    <section id="tentang" class="py-16 max-w-7xl mx-auto px-6 md:px-12 scroll-mt-24">
-        <div class="flex flex-col lg:flex-row gap-16 items-center">
-            <div class="w-full lg:w-1/2 relative">
-                <div class="absolute -top-6 -left-6 w-32 h-32 bg-surface-variant rounded-full -z-10"></div>
-                <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-blue-50 rounded-full -z-10"></div>
-                <img src="img/Yout-Hub-Logo.png" alt="Pemberdayaan Pemuda Mangsit" class="rounded-[2rem] shadow-soft w-full h-[450px] object-cover" loading="lazy" />
-                <div class="absolute bottom-8 -left-4 md:-left-8 bg-white p-5 rounded-2xl shadow-soft flex items-center gap-4">
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600"><span class="material-symbols-outlined icon-filled">eco</span></div>
-                    <div>
-                        <div class="font-bold text-primary text-sm" data-i18n="badge_eco_title">Pemberdayaan Lokal</div>
-                        <div class="text-xs text-on-surface-variant" data-i18n="badge_eco_desc">100% Dukungan untuk Warga</div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full lg:w-1/2 flex flex-col gap-6">
-                <div>
-                    <h4 class="text-secondary font-bold uppercase tracking-widest text-sm mb-2" data-i18n="about_subtitle">Kisah Kami</h4>
-                    <h2 class="font-['Plus_Jakarta_Sans'] text-3xl md:text-5xl font-extrabold text-primary leading-tight" data-i18n="about_title">Lebih dari Sekadar Layanan</h2>
-                </div>
-                <p class="text-on-surface-variant text-lg leading-relaxed mt-2" data-i18n="about_desc_1">
-                    Mangsit Youth Hub adalah gerakan pemberdayaan ekonomi lokal berbasis teknologi. Lahir dari inisiatif pemuda Dusun Mangsit, kami hadir untuk mengangkat potensi para pelaku usaha jasa di lingkungan kami agar mampu beradaptasi, bersaing, dan menjangkau pasar global.
+            
+            <div class="relative z-20 w-full max-w-4xl mx-auto text-center flex flex-col items-center mt-10">
+                <span class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold tracking-widest mb-6 border border-white/30 uppercase" data-i18n="hero_badge">
+                    Island Precision, Local Heart
+                </span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6" data-i18n="hero_title">
+                    Standar Baru Liburan Anda di <span class="text-brandAccent">Senggigi.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-200 max-w-2xl font-light mb-10" data-i18n="hero_desc">
+                    Menghubungkan Anda dengan layanan lokal otentik melalui standar keamanan dan profesionalisme kelas dunia.
                 </p>
-                <div class="border-l-4 border-secondary pl-6 py-2 my-2">
-                    <p class="text-primary font-medium text-lg italic" data-i18n="about_desc_2">
-                        "Setiap pesanan Anda bukanlah sekadar transaksi, melainkan dukungan langsung untuk menghidupkan perekonomian warga setempat dan mendorong digitalisasi pariwisata di Senggigi."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="layanan" class="py-20 bg-surface-variant/30 mt-12 scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h4 class="text-secondary font-bold uppercase tracking-widest text-sm mb-2" data-i18n="service_subtitle">Eksplorasi Tanpa Batas</h4>
-                <h2 class="font-['Plus_Jakarta_Sans'] text-3xl md:text-5xl font-extrabold text-primary" data-i18n="service_title">Layanan Presisi Pulau</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div onclick="openModal('1')" class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 group cursor-pointer border border-outline-variant/50 flex flex-col">
-                    <div class="h-56 relative overflow-hidden bg-gray-200">
-                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
-                        <img src="img/nmax.png" alt="Sewa Motor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full z-20 shadow-sm" data-i18n="srv_1_badge">Populer</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-['Plus_Jakarta_Sans'] text-xl font-bold text-primary" data-i18n="srv_1_title">Sewa Motor</h3>
-                            <div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-colors text-primary"><span class="material-symbols-outlined">two_wheeler</span></div>
-                        </div>
-                        <p class="text-on-surface-variant text-sm line-clamp-2" data-i18n="srv_1_desc">Skuter handal, terawat, dan diantar langsung ke vila Anda.</p>
-                    </div>
-                </div>
-
-                <div onclick="openModal('2')" class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 group cursor-pointer border border-outline-variant/50 flex flex-col">
-                    <div class="h-56 relative overflow-hidden bg-gray-200">
-                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
-                        <img src="img/papan.png" alt="Papan Selancar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-['Plus_Jakarta_Sans'] text-xl font-bold text-primary" data-i18n="srv_2_title">Papan Selancar</h3>
-                            <div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-colors text-primary"><span class="material-symbols-outlined">surfing</span></div>
-                        </div>
-                        <p class="text-on-surface-variant text-sm line-clamp-2" data-i18n="srv_2_desc">Papan premium untuk semua tingkat kemahiran di pantai.</p>
-                    </div>
-                </div>
-
-                <div onclick="openModal('3')" class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 group cursor-pointer border border-outline-variant/50 flex flex-col">
-                    <div class="h-56 relative overflow-hidden bg-gray-200">
-                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
-                        <img src="img/selam.png" alt="Snorkeling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-['Plus_Jakarta_Sans'] text-xl font-bold text-primary" data-i18n="srv_3_title">Alat Snorkeling</h3>
-                            <div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-colors text-primary"><span class="material-symbols-outlined">scuba_diving</span></div>
-                        </div>
-                        <p class="text-on-surface-variant text-sm line-clamp-2" data-i18n="srv_3_desc">Masker sanitasi, sirip, dan pelampung untuk eksplorasi aman.</p>
-                    </div>
-                </div>
-
-                <div onclick="openModal('4')" class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 group cursor-pointer border border-outline-variant/50 flex flex-col">
-                    <div class="h-56 relative overflow-hidden bg-gray-200">
-                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
-                        <img src="img/kain.png" alt="Kain Pantai" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-['Plus_Jakarta_Sans'] text-xl font-bold text-primary" data-i18n="srv_4_title">Kain Pantai</h3>
-                            <div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-colors text-primary"><span class="material-symbols-outlined">beach_access</span></div>
-                        </div>
-                        <p class="text-on-surface-variant text-sm line-clamp-2" data-i18n="srv_4_desc">Kain pantai premium dengan desain tropis, nyaman dan cepat kering.</p>
-                    </div>
-                </div>
-
-                <div onclick="openModal('5')" class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 group cursor-pointer border border-outline-variant/50 flex flex-col lg:col-span-2">
-                    <div class="h-56 lg:h-64 relative overflow-hidden bg-gray-200">
-                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80" alt="Transportasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                        <div class="absolute bottom-6 left-6 z-20">
-                            <span class="bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full mb-3 inline-block shadow-lg" data-i18n="srv_5_badge">Premium Fleet</span>
-                            <h3 class="font-['Plus_Jakarta_Sans'] text-2xl lg:text-3xl font-bold text-white" data-i18n="srv_5_title">Transportasi & Antar Jemput</h3>
-                        </div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow bg-white">
-                        <p class="text-on-surface-variant" data-i18n="srv_5_desc">Layanan mobil & sopir profesional untuk antar jemput bandara dan eksplorasi area wisata Lombok dengan aman dan nyaman.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimoni" class="py-20 max-w-7xl mx-auto px-6 md:px-12 scroll-mt-24">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <div class="max-w-2xl">
-                <h4 class="text-secondary font-bold uppercase tracking-widest text-sm mb-2" data-i18n="testi_subtitle">Ulasan Pelanggan</h4>
-                <h2 class="font-['Plus_Jakarta_Sans'] text-3xl md:text-5xl font-extrabold text-primary" data-i18n="testi_title">Apa Kata Mereka?</h2>
-            </div>
-            <div class="flex items-center gap-2 bg-surface-variant px-4 py-2 rounded-xl border border-outline-variant/50">
-                <span class="text-primary font-bold text-xl">4.9</span>
-                <div class="flex text-amber-400">
-                    <span class="material-symbols-outlined icon-filled">star</span>
-                    <span class="material-symbols-outlined icon-filled">star</span>
-                    <span class="material-symbols-outlined icon-filled">star</span>
-                    <span class="material-symbols-outlined icon-filled">star</span>
-                    <span class="material-symbols-outlined icon-filled">star</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-8 rounded-3xl border border-outline-variant/50 shadow-sm flex flex-col gap-4">
-                <div class="flex text-amber-400 text-sm">
-                    <span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span>
-                </div>
-                <p class="text-on-surface-variant flex-grow italic" data-i18n="testi_1_text">"Layanan sewa motor paling terpercaya di Senggigi! Motornya baru, bersih, dan diantar tepat waktu ke vila kami. Pasti akan pesan lagi."</p>
-                <div class="flex items-center gap-3 mt-4 pt-4 border-t border-outline-variant/30">
-                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary font-bold">M</div>
-                    <div>
-                        <div class="font-bold text-primary text-sm" data-i18n="testi_1_name">Michael T.</div>
-                        <div class="text-xs text-on-surface-variant">Australia</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-white p-8 rounded-3xl border border-outline-variant/50 shadow-sm flex flex-col gap-4">
-                <div class="flex text-amber-400 text-sm">
-                    <span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span>
-                </div>
-                <p class="text-on-surface-variant flex-grow italic" data-i18n="testi_2_text">"Sopir transport sangat sopan dan mengemudi dengan aman dari bandara ke Senggigi. Harga transparan tanpa biaya tersembunyi. Sangat direkomendasikan!"</p>
-                <div class="flex items-center gap-3 mt-4 pt-4 border-t border-outline-variant/30">
-                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-700 font-bold">S</div>
-                    <div>
-                        <div class="font-bold text-primary text-sm" data-i18n="testi_2_name">Sarah & John</div>
-                        <div class="text-xs text-on-surface-variant">United Kingdom</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-white p-8 rounded-3xl border border-outline-variant/50 shadow-sm flex flex-col gap-4">
-                <div class="flex text-amber-400 text-sm">
-                    <span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span>
-                </div>
-                <p class="text-on-surface-variant flex-grow italic" data-i18n="testi_3_text">"Menyewa papan selancar di sini sangat mudah. Alatnya premium dan staf membalas WhatsApp dengan sangat cepat. Terbaik di Mangsit!"</p>
-                <div class="flex items-center gap-3 mt-4 pt-4 border-t border-outline-variant/30">
-                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-secondary font-bold">A</div>
-                    <div>
-                        <div class="font-bold text-primary text-sm" data-i18n="testi_3_name">Andi W.</div>
-                        <div class="text-xs text-on-surface-variant">Jakarta, Indonesia</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="py-20 bg-surface-variant/30 scroll-mt-24">
-        <div class="max-w-4xl mx-auto px-6 md:px-12">
-            <div class="text-center mb-12">
-                <h4 class="text-secondary font-bold uppercase tracking-widest text-sm mb-2" data-i18n="faq_subtitle">Informasi Penting</h4>
-                <h2 class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-extrabold text-primary" data-i18n="faq_title">Pertanyaan Umum</h2>
-            </div>
-            
-            <div class="flex flex-col gap-4">
-                <details class="bg-white rounded-2xl border border-outline-variant/50 shadow-sm group">
-                    <summary class="font-bold text-primary p-6 flex justify-between items-center text-lg">
-                        <span data-i18n="faq_1_q">Bagaimana sistem jaminan untuk sewa alat/motor?</span>
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-on-surface-variant border-t border-outline-variant/30 pt-4" data-i18n="faq_1_a">
-                        Demi keamanan bersama, kami hanya memerlukan foto KTP/Paspor Anda yang dikirim via WhatsApp saat pemesanan. Tidak ada penahanan dokumen asli atau deposit uang yang rumit.
-                    </div>
-                </details>
-
-                <details class="bg-white rounded-2xl border border-outline-variant/50 shadow-sm group">
-                    <summary class="font-bold text-primary p-6 flex justify-between items-center text-lg">
-                        <span data-i18n="faq_2_q">Apakah harga transportasi sudah final?</span>
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-on-surface-variant border-t border-outline-variant/30 pt-4" data-i18n="faq_2_a">
-                        Ya, harga yang tertera di daftar kami adalah harga NETT per mobil. Sudah termasuk bensin, jasa sopir profesional, dan biaya parkir. Tidak ada biaya tersembunyi.
-                    </div>
-                </details>
-
-                <details class="bg-white rounded-2xl border border-outline-variant/50 shadow-sm group">
-                    <summary class="font-bold text-primary p-6 flex justify-between items-center text-lg">
-                        <span data-i18n="faq_3_q">Bagaimana jika terjadi kendala / kerusakan di jalan?</span>
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-on-surface-variant border-t border-outline-variant/30 pt-4" data-i18n="faq_3_a">
-                        Semua alat dan kendaraan kami dirawat rutin. Namun jika terjadi kendala teknis alami, tim kami siap memberikan bantuan darurat atau penggantian unit secepatnya di area Senggigi secara gratis.
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <section id="pemesanan" class="py-20 scroll-mt-20">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <h2 class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-extrabold text-primary text-center mb-16" data-i18n="process_title">Cara Pemesanan</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center relative">
-                <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-outline-variant/50 -z-10"></div>
-                
-                <div class="flex flex-col items-center gap-4">
-                    <div class="w-24 h-24 rounded-full bg-white border-8 border-background shadow-sm text-primary flex items-center justify-center mb-2">
-                        <span class="material-symbols-outlined text-4xl">touch_app</span>
-                    </div>
-                    <h3 class="font-bold text-xl text-primary" data-i18n="proc_1_title">1. Pilih Layanan</h3>
-                    <p class="text-on-surface-variant" data-i18n="proc_1_desc">Pilih layanan di website dan klik pesan untuk terhubung langsung ke WhatsApp kami.</p>
-                </div>
-                <div class="flex flex-col items-center gap-4">
-                    <div class="w-24 h-24 rounded-full bg-white border-8 border-background shadow-sm text-primary flex items-center justify-center mb-2">
-                        <span class="material-symbols-outlined text-4xl">fact_check</span>
-                    </div>
-                    <h3 class="font-bold text-xl text-primary" data-i18n="proc_2_title">2. Konfirmasi Detail</h3>
-                    <p class="text-on-surface-variant" data-i18n="proc_2_desc">Admin kami akan memverifikasi kebutuhan, waktu, dan lokasi pengantaran Anda dengan cepat.</p>
-                </div>
-                <div class="flex flex-col items-center gap-4">
-                    <div class="w-24 h-24 rounded-full bg-white border-8 border-background shadow-sm text-secondary flex items-center justify-center mb-2">
-                        <span class="material-symbols-outlined text-4xl">map</span>
-                    </div>
-                    <h3 class="font-bold text-xl text-primary" data-i18n="proc_3_title">3. Nikmati Liburan</h3>
-                    <p class="text-on-surface-variant" data-i18n="proc_3_desc">Layanan/barang diantar tepat waktu ke lokasi Anda. Saatnya menikmati keindahan Lombok!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="kontak" class="py-20 max-w-7xl mx-auto px-6 md:px-12 scroll-mt-20">
-        <div class="bg-white rounded-[2rem] shadow-soft border border-outline-variant/30 overflow-hidden flex flex-col md:flex-row">
-            <div class="p-10 md:p-16 md:w-1/2 flex flex-col justify-center">
-                <h4 class="text-secondary font-bold uppercase tracking-widest text-sm mb-2" data-i18n="contact_subtitle">Selalu Hadir Untuk Anda</h4>
-                <h2 class="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-extrabold text-primary mb-6" data-i18n="contact_title">Hubungi Kami</h2>
-                <p class="text-on-surface-variant mb-8" data-i18n="contact_desc">Punya pertanyaan khusus atau ingin berkonsultasi mengenai itinerary? Tim lokal kami siap membantu merencanakan liburan sempurna Anda.</p>
-                
-                <div class="flex flex-col gap-6 mb-10">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-surface-variant rounded-full flex justify-center items-center text-primary shrink-0"><span class="material-symbols-outlined">location_on</span></div>
-                        <div>
-                            <p class="font-bold text-primary">Basecamp</p>
-                            <p class="text-on-surface-variant">Jl. Raya Senggigi, Dusun Mangsit, Lombok Barat, NTB</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-surface-variant rounded-full flex justify-center items-center text-primary shrink-0"><span class="material-symbols-outlined">schedule</span></div>
-                        <div>
-                            <p class="font-bold text-primary">Jam Operasional</p>
-                            <p class="text-on-surface-variant">Layanan Pelanggan: 07.00 - 22.00 WITA<br>Darurat/Pesan Antar: 24 Jam</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="https://wa.me/6285959202456" target="_blank" class="bg-[#25D366] text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-[#20b858] transition-all active:scale-95 flex items-center justify-center gap-3 w-fit">
-                    <span class="material-symbols-outlined icon-filled">chat</span>
-                    <span data-i18n="btn_whatsapp">WhatsApp Concierge</span>
+                <a href="#layanan" class="bg-brandAccent text-white font-bold px-8 py-4 rounded-full shadow-floating hover:bg-[#c94a0b] transition-all active:scale-95 flex items-center gap-2">
+                    <span data-i18n="btn_explore">Lihat Layanan</span>
+                    <span class="material-symbols-outlined">arrow_downward</span>
                 </a>
             </div>
-            
-            <div class="bg-gray-200 md:w-1/2 min-h-[400px] relative overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31569.3200089512!2d116.02940035707299!3d-8.48333225968778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc271063eabaf%3A0xb17dd9563c065474!2sMangsit%2C%20Senggigi%2C%20Kec.%20Batu%20Layar%2C%20Kabupaten%20Lombok%20Barat%2C%20Nusa%20Tenggara%20Bar.!5e0!3m2!1sid!2sid!4v1778761242394!5m2!1sid!2sid" class="absolute inset-0 w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="bg-primary text-white w-full pt-20 pb-10 mt-10 rounded-t-[2rem]">
+        <section class="max-w-6xl mx-auto px-6 relative z-30 -mt-16 md:-mt-12 mb-20">
+            <div class="bg-white rounded-2xl shadow-soft border border-slate-200 p-6 flex flex-wrap justify-center md:justify-between gap-6 md:gap-4 text-sm md:text-base font-bold text-brandDark">
+                <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600"><span class="material-symbols-outlined icon-filled">verified_user</span></div><span data-i18n="trust_1">Mitra Terverifikasi</span></div>
+                <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600"><span class="material-symbols-outlined icon-filled">health_and_safety</span></div><span data-i18n="trust_2">Keamanan Prioritas</span></div>
+                <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-brandAccent"><span class="material-symbols-outlined icon-filled">support_agent</span></div><span data-i18n="trust_3">Dukungan 24/7</span></div>
+                <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600"><span class="material-symbols-outlined icon-filled">thumb_up</span></div><span data-i18n="trust_4">Kualitas Premium</span></div>
+            </div>
+        </section>
+
+        <section id="tentang" class="py-12 max-w-7xl mx-auto px-6 md:px-12 scroll-mt-24">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-surfaceVariant rounded-full -z-10"></div>
+                    <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-blue-50 rounded-full -z-10"></div>
+                    <img src="img/Yout-Hub-Logo.png" alt="Mangsit Youth Hub" class="rounded-[2rem] shadow-soft w-full h-[400px] object-cover bg-white p-4" loading="lazy" />
+                    <div class="absolute bottom-8 -left-4 bg-white p-5 rounded-2xl shadow-soft flex items-center gap-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600"><span class="material-symbols-outlined icon-filled">eco</span></div>
+                        <div>
+                            <div class="font-bold text-brandDark text-sm" data-i18n="badge_eco_title">Pemberdayaan Lokal</div>
+                            <div class="text-xs text-brandMuted" data-i18n="badge_eco_desc">100% Dukungan Warga</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col gap-6">
+                    <div>
+                        <h4 class="text-brandAccent font-bold uppercase tracking-widest text-sm mb-2" data-i18n="about_subtitle">Kisah Kami</h4>
+                        <h2 class="text-3xl md:text-5xl font-extrabold text-brandDark leading-tight" data-i18n="about_title">Lebih dari Sekadar Layanan</h2>
+                    </div>
+                    <p class="text-brandMuted text-lg leading-relaxed" data-i18n="about_desc_1">
+                        Mangsit Youth Hub adalah gerakan pemberdayaan ekonomi lokal berbasis teknologi. Lahir dari inisiatif pemuda Dusun Mangsit, kami hadir untuk mengangkat potensi para pelaku usaha jasa di lingkungan kami agar mampu beradaptasi dan bersaing di pasar global.
+                    </p>
+                    <div class="border-l-4 border-brandAccent pl-6 py-2 my-2">
+                        <p class="text-brandDark font-medium text-lg italic" data-i18n="about_desc_2">
+                            "Setiap pesanan Anda bukanlah sekadar transaksi, melainkan dukungan langsung untuk menghidupkan perekonomian warga setempat dan mendorong digitalisasi pariwisata di Senggigi."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="layanan" class="py-20 bg-surfaceVariant/40 mt-12 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h4 class="text-brandAccent font-bold uppercase tracking-widest text-sm mb-2" data-i18n="service_subtitle">Eksplorasi Tanpa Batas</h4>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-brandDark" data-i18n="service_title">Katalog Layanan Presisi</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 border border-slate-200 flex flex-col group">
+                        <div class="h-56 relative overflow-hidden bg-slate-100">
+                            <img src="img/nmax.png" alt="Sewa Motor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-brandDark text-xs font-bold px-3 py-1.5 rounded-full shadow-sm" data-i18n="badge_popular">Populer</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-brandDark flex items-center justify-between mb-2">
+                                <span data-i18n="srv_1_title">Sewa Motor</span> <span class="material-symbols-outlined text-brandAccent">two_wheeler</span>
+                            </h3>
+                            <p class="text-brandMuted text-sm line-clamp-2 mb-4 flex-grow" data-i18n="srv_1_desc">Skuter handal, terawat, dan diantar langsung ke vila Anda. Termasuk 2 helm.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                                <div><span class="block text-xs text-brandMuted" data-i18n="price_start">Mulai</span><span class="text-lg font-extrabold text-brandDark data-price" data-idr="75000">Rp 75.000</span></div>
+                                <button onclick="openBookingWizard('1')" class="bg-brandDark text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-brandAccent transition-colors shadow-md" data-i18n="btn_book">Pesan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 border border-slate-200 flex flex-col group">
+                        <div class="h-56 relative overflow-hidden bg-slate-100">
+                            <img src="img/papan.png" alt="Papan Selancar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-brandDark flex items-center justify-between mb-2">
+                                <span data-i18n="srv_2_title">Papan Selancar</span> <span class="material-symbols-outlined text-brandAccent">surfing</span>
+                            </h3>
+                            <p class="text-brandMuted text-sm line-clamp-2 mb-4 flex-grow" data-i18n="srv_2_desc">Berbagai ukuran papan untuk pemula hingga profesional. Lokasi dekat surf spot.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                                <div><span class="block text-xs text-brandMuted" data-i18n="price_start">Mulai</span><span class="text-lg font-extrabold text-brandDark data-price" data-idr="50000">Rp 50.000</span></div>
+                                <button onclick="openBookingWizard('2')" class="bg-brandDark text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-brandAccent transition-colors shadow-md" data-i18n="btn_book">Pesan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 border border-slate-200 flex flex-col group">
+                        <div class="h-56 relative overflow-hidden bg-slate-100">
+                            <img src="img/selam.png" alt="Snorkeling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-brandDark flex items-center justify-between mb-2">
+                                <span data-i18n="srv_3_title">Alat Snorkeling</span> <span class="material-symbols-outlined text-brandAccent">scuba_diving</span>
+                            </h3>
+                            <p class="text-brandMuted text-sm line-clamp-2 mb-4 flex-grow" data-i18n="srv_3_desc">Masker sanitasi, sirip, dan pelampung untuk eksplorasi bawah laut yang aman.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                                <div><span class="block text-xs text-brandMuted" data-i18n="price_start">Mulai</span><span class="text-lg font-extrabold text-brandDark data-price" data-idr="35000">Rp 35.000</span></div>
+                                <button onclick="openBookingWizard('3')" class="bg-brandDark text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-brandAccent transition-colors shadow-md" data-i18n="btn_book">Pesan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 border border-slate-200 flex flex-col group">
+                        <div class="h-56 relative overflow-hidden bg-slate-100">
+                            <img src="img/kain.png" alt="Kain Pantai" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-brandDark flex items-center justify-between mb-2">
+                                <span data-i18n="srv_4_title">Kain Pantai Premium</span> <span class="material-symbols-outlined text-brandAccent">beach_access</span>
+                            </h3>
+                            <p class="text-brandMuted text-sm line-clamp-2 mb-4 flex-grow" data-i18n="srv_4_desc">Kain pantai tebal, nyaman, dan cepat kering dengan desain tropis elegan.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                                <div><span class="block text-xs text-brandMuted" data-i18n="price_start">Mulai</span><span class="text-lg font-extrabold text-brandDark data-price" data-idr="25000">Rp 25.000</span></div>
+                                <button onclick="openBookingWizard('4')" class="bg-brandDark text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-brandAccent transition-colors shadow-md" data-i18n="btn_book">Pesan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-soft transition-all duration-300 border border-slate-200 flex flex-col group lg:col-span-2">
+                        <div class="h-56 relative overflow-hidden bg-brandDark">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80" alt="Transportasi" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
+                            <div class="absolute bottom-6 left-6 z-20">
+                                <span class="bg-brandAccent text-white text-xs font-bold px-3 py-1.5 rounded-full mb-3 inline-block shadow-lg" data-i18n="badge_premium">Premium Fleet</span>
+                                <h3 class="text-2xl font-bold text-white" data-i18n="srv_5_title">Transportasi & Antar Jemput</h3>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col md:flex-row items-center justify-between gap-4 flex-grow bg-white">
+                            <p class="text-brandMuted text-sm md:max-w-sm" data-i18n="srv_5_desc">Layanan mobil (Innova/Avanza) & sopir profesional untuk antar jemput bandara dan eksplorasi area wisata Lombok dengan aman dan nyaman.</p>
+                            <button onclick="openBookingWizard('5')" class="w-full md:w-auto bg-brandAccent text-white px-8 py-4 rounded-xl text-sm font-bold hover:bg-[#c94a0b] transition-colors shadow-md" data-i18n="btn_check_route">Cek Harga Rute</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 md:px-12 mt-12 mb-20">
+            <div class="rounded-[2rem] bg-brandDark text-white p-8 md:p-12 relative overflow-hidden shadow-xl border border-white/10">
+                <div class="relative z-10 max-w-xl">
+                    <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold text-orange-300 backdrop-blur-md border border-white/20" data-i18n="badge_service">
+                        <span class="h-2 w-2 rounded-full bg-brandAccent animate-pulse"></span> Cakupan Layanan
+                    </span>
+                    <h3 data-i18n="radius_title" class="mt-5 text-3xl font-extrabold md:text-4xl">Gratis Antar Jemput Area Senggigi</h3>
+                    <p data-i18n="radius_desc" class="mt-4 text-slate-300 text-base leading-relaxed">
+                        Kami memastikan kenyamanan maksimal. Pesan secara online, dan tim kami akan mengantarkan kendaraan atau peralatan langsung ke lobi hotel maupun vila Anda di sepanjang pesisir Senggigi hingga Mangsit.
+                    </p>
+                </div>
+                <div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-20 hidden md:block pointer-events-none">
+                    <svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 0 200 Q 100 100 200 200 T 400 200" fill="none" stroke="white" stroke-width="2" stroke-dasharray="10,5"/>
+                        <circle cx="200" cy="200" r="8" fill="#E05915" />
+                        <circle cx="300" cy="200" r="8" fill="white" />
+                        <circle cx="100" cy="200" r="8" fill="white" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimoni" class="py-16 max-w-7xl mx-auto px-6 md:px-12 scroll-mt-24">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <h4 class="text-brandAccent font-bold uppercase tracking-widest text-sm mb-2" data-i18n="testi_subtitle">Ulasan Pelanggan</h4>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-brandDark" data-i18n="testi_title">Apa Kata Mereka?</h2>
+                </div>
+                <div class="flex items-center gap-2 bg-surfaceVariant px-5 py-2.5 rounded-xl border border-slate-200">
+                    <span class="text-brandDark font-extrabold text-2xl">4.9</span>
+                    <div class="flex text-amber-400">
+                        <span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col gap-4">
+                    <div class="flex text-amber-400 text-sm"><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span></div>
+                    <p class="text-brandMuted flex-grow italic" data-i18n="testi_1_text">"Layanan sewa motor paling terpercaya di Senggigi! Motornya baru, bersih, dan diantar tepat waktu ke vila kami. Pasti akan pesan lagi."</p>
+                    <div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-brandDark font-bold">M</div>
+                        <div><div class="font-bold text-brandDark text-sm">Michael T.</div><div class="text-xs text-brandMuted">Australia</div></div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col gap-4">
+                    <div class="flex text-amber-400 text-sm"><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span></div>
+                    <p class="text-brandMuted flex-grow italic" data-i18n="testi_2_text">"Sopir transport sangat sopan dan mengemudi dengan aman dari bandara ke Senggigi. Harga transparan tanpa biaya tersembunyi. Sangat direkomendasikan!"</p>
+                    <div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-700 font-bold">S</div>
+                        <div><div class="font-bold text-brandDark text-sm">Sarah & John</div><div class="text-xs text-brandMuted">United Kingdom</div></div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col gap-4">
+                    <div class="flex text-amber-400 text-sm"><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span><span class="material-symbols-outlined icon-filled">star</span></div>
+                    <p class="text-brandMuted flex-grow italic" data-i18n="testi_3_text">"Menyewa papan selancar di sini sangat mudah. Alatnya premium dan staf membalas WhatsApp dengan sangat cepat. Terbaik di Mangsit!"</p>
+                    <div class="flex items-center gap-3 mt-4 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-brandAccent font-bold">A</div>
+                        <div><div class="font-bold text-brandDark text-sm">Andi W.</div><div class="text-xs text-brandMuted">Jakarta, Indonesia</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-20 bg-surfaceVariant/40 scroll-mt-24">
+            <div class="max-w-4xl mx-auto px-6 md:px-12">
+                <div class="text-center mb-12">
+                    <h4 class="text-brandAccent font-bold uppercase tracking-widest text-sm mb-2" data-i18n="faq_subtitle">Informasi Penting</h4>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-brandDark" data-i18n="faq_title">Pertanyaan Umum</h2>
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <details class="bg-white rounded-2xl border border-slate-200 shadow-sm group">
+                        <summary class="font-bold text-brandDark p-6 flex justify-between items-center text-lg">
+                            <span data-i18n="faq_1_q">Bagaimana sistem jaminan untuk sewa alat/motor?</span>
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-6 pb-6 text-brandMuted border-t border-slate-100 pt-4" data-i18n="faq_1_a">
+                            Demi keamanan bersama, kami hanya memerlukan foto KTP/Paspor Anda yang dikirim via WhatsApp saat pemesanan. Tidak ada penahanan dokumen asli atau deposit uang yang rumit.
+                        </div>
+                    </details>
+                    <details class="bg-white rounded-2xl border border-slate-200 shadow-sm group">
+                        <summary class="font-bold text-brandDark p-6 flex justify-between items-center text-lg">
+                            <span data-i18n="faq_2_q">Apakah harga transportasi sudah final?</span>
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-6 pb-6 text-brandMuted border-t border-slate-100 pt-4" data-i18n="faq_2_a">
+                            Ya, harga yang tertera di daftar kami adalah harga NETT per mobil. Sudah termasuk bensin, jasa sopir profesional, dan biaya parkir. Tidak ada biaya tersembunyi.
+                        </div>
+                    </details>
+                    <details class="bg-white rounded-2xl border border-slate-200 shadow-sm group">
+                        <summary class="font-bold text-brandDark p-6 flex justify-between items-center text-lg">
+                            <span data-i18n="faq_3_q">Bagaimana jika terjadi kendala / kerusakan di jalan?</span>
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-6 pb-6 text-brandMuted border-t border-slate-100 pt-4" data-i18n="faq_3_a">
+                            Semua alat dan kendaraan kami dirawat rutin. Namun jika terjadi kendala teknis alami, tim kami siap memberikan bantuan darurat atau penggantian unit secepatnya di area Senggigi secara gratis.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="pemesanan" class="py-20 scroll-mt-20">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brandDark text-center mb-16" data-i18n="process_title">Cara Pemesanan</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center relative">
+                    <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-slate-200 -z-10"></div>
+                    
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-24 h-24 rounded-full bg-white border-8 border-brandLight shadow-sm text-brandDark flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-4xl">touch_app</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-brandDark" data-i18n="proc_1_title">1. Pilih Layanan</h3>
+                        <p class="text-brandMuted text-sm" data-i18n="proc_1_desc">Gunakan kalkulator harga di website kami dan klik pesan untuk terhubung ke WhatsApp.</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-24 h-24 rounded-full bg-white border-8 border-brandLight shadow-sm text-brandDark flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-4xl">fact_check</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-brandDark" data-i18n="proc_2_title">2. Konfirmasi Detail</h3>
+                        <p class="text-brandMuted text-sm" data-i18n="proc_2_desc">Admin lokal kami akan memverifikasi kebutuhan, waktu, dan lokasi pengantaran Anda dengan cepat.</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-24 h-24 rounded-full bg-white border-8 border-brandLight shadow-sm text-brandAccent flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-4xl">map</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-brandDark" data-i18n="proc_3_title">3. Nikmati Liburan</h3>
+                        <p class="text-brandMuted text-sm" data-i18n="proc_3_desc">Layanan/barang diantar tepat waktu ke lokasi Anda. Saatnya menikmati keindahan Lombok!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="py-12 max-w-7xl mx-auto px-6 md:px-12 scroll-mt-20">
+            <div class="bg-white rounded-[2rem] shadow-soft border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+                <div class="p-10 md:p-16 md:w-1/2 flex flex-col justify-center">
+                    <h4 class="text-brandAccent font-bold uppercase tracking-widest text-sm mb-2" data-i18n="contact_subtitle">Selalu Hadir Untuk Anda</h4>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-brandDark mb-6" data-i18n="contact_title">Hubungi Kami</h2>
+                    <p class="text-brandMuted mb-8" data-i18n="contact_desc">Punya pertanyaan khusus atau ingin berkonsultasi mengenai itinerary? Tim lokal kami siap membantu merencanakan liburan sempurna Anda.</p>
+                    
+                    <div class="flex flex-col gap-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-surfaceVariant rounded-full flex justify-center items-center text-brandDark shrink-0"><span class="material-symbols-outlined">location_on</span></div>
+                            <div><p class="font-bold text-brandDark">Basecamp</p><p class="text-brandMuted text-sm">Jl. Raya Senggigi, Dusun Mangsit, Lombok Barat, NTB</p></div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-surfaceVariant rounded-full flex justify-center items-center text-brandDark shrink-0"><span class="material-symbols-outlined">schedule</span></div>
+                            <div><p class="font-bold text-brandDark">Jam Operasional</p><p class="text-brandMuted text-sm">Layanan Pelanggan: 07.00 - 22.00 WITA<br>Darurat/Pesan Antar: 24 Jam</p></div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/6285959202456" target="_blank" class="bg-[#25D366] text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-[#20b858] transition-all active:scale-95 flex items-center justify-center gap-3 w-fit">
+                        <span class="material-symbols-outlined icon-filled">chat</span>
+                        <span data-i18n="btn_whatsapp">WhatsApp Concierge</span>
+                    </a>
+                </div>
+                
+                <div class="bg-slate-200 md:w-1/2 min-h-[400px] relative overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31569.3200089512!2d116.02940035707299!3d-8.48333225968778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc271063eabaf%3A0xb17dd9563c065474!2sMangsit%2C%20Senggigi%2C%20Kec.%20Batu%20Layar%2C%20Kabupaten%20Lombok%20Barat%2C%20Nusa%20Tenggara%20Bar.!5e0!3m2!1sid!2sid!4v1778761242394!5m2!1sid!2sid" class="absolute inset-0 w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brandDark text-white w-full pt-20 pb-10 mt-10 rounded-t-[2rem]">
         <div class="max-w-7xl mx-auto px-6 md:px-12">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
                 <div class="flex flex-col gap-6">
-                    <div class="font-['Plus_Jakarta_Sans'] text-2xl font-extrabold text-white flex items-center gap-3">
+                    <div class="text-2xl font-extrabold text-white flex items-center gap-3">
                         <img src="img/Yout-Hub-Logo.png" alt="Logo" class="h-10 brightness-0 invert" />
                         Mangsit Youth
                     </div>
-                    <p class="text-sm text-gray-400 leading-relaxed" data-i18n="footer_desc">Platform digital concierge terdepan di Senggigi. Memberdayakan bisnis lokal dengan standar hospitality internasional.</p>
+                    <p class="text-sm text-slate-400 leading-relaxed" data-i18n="footer_desc">Platform digital concierge terdepan di Senggigi. Memberdayakan bisnis lokal dengan standar hospitality internasional.</p>
                 </div>
                 
                 <div class="flex flex-col gap-5 lg:pl-8">
                     <h4 class="font-bold text-lg text-white" data-i18n="footer_quick_links">Tautan Cepat</h4>
-                    <div class="flex flex-col gap-3 text-sm text-gray-400">
-                        <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="nav_services">Layanan Kami</a>
-                        <a class="hover:text-secondary transition-colors w-fit" href="#tentang" data-i18n="nav_about">Tentang Kami</a>
-                        <a class="hover:text-secondary transition-colors w-fit" href="#testimoni" data-i18n="nav_reviews">Ulasan Pelanggan</a>
-                        <a class="hover:text-secondary transition-colors w-fit" href="#faq" data-i18n="nav_faq">FAQ & Bantuan</a>
+                    <div class="flex flex-col gap-3 text-sm text-slate-400">
+                        <a class="hover:text-brandAccent transition-colors w-fit" href="#layanan" data-i18n="nav_services">Layanan Kami</a>
+                        <a class="hover:text-brandAccent transition-colors w-fit" href="#tentang" data-i18n="nav_about">Tentang Kami</a>
+                        <a class="hover:text-brandAccent transition-colors w-fit" href="#testimoni" data-i18n="nav_reviews">Ulasan Pelanggan</a>
+                        <a class="hover:text-brandAccent transition-colors w-fit" href="#faq" data-i18n="nav_faq">FAQ & Bantuan</a>
                     </div>
                 </div>
                 
                 <div class="flex flex-col gap-5">
                     <h4 class="font-bold text-lg text-white" data-i18n="footer_services">Layanan Populer</h4>
-                    <div class="flex flex-col gap-3 text-sm text-gray-400">
-                        <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="srv_1_title">Sewa Motor</a>
-                        <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="srv_5_title">Transportasi & Antar Jemput</a>
-                        <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="srv_2_title">Papan Selancar</a>
-                        <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="srv_3_title">Perlengkapan Snorkeling</a>
+                    <div class="flex flex-col gap-3 text-sm text-slate-400">
+                        <a class="hover:text-brandAccent transition-colors w-fit" href="#layanan" data-i18n="srv_1_title">Sewa Motor</a>
+                        <a class="hover:text-brandAccent transition-colors w-fit" href="#layanan" data-i18n="srv_5_title">Transportasi & Antar Jemput</a>
+                        <a class="hover:text-brandAccent transition-colors w-fit" href="#layanan" data-i18n="srv_2_title">Papan Selancar</a>
+                        <a class="hover:text-brandAccent transition-colors w-fit" href="#layanan" data-i18n="srv_3_title">Alat Snorkeling</a>
                     </div>
                 </div>
                 
                 <div class="flex flex-col gap-5">
                     <h4 class="font-bold text-lg text-white" data-i18n="footer_contact">Kontak Kami</h4>
-                    <div class="flex flex-col gap-4 text-sm text-gray-400">
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">mail</span> hello@mangsityouth.com</div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">call</span> +62 859 5920 2456</div>
-                        <div class="flex gap-4 mt-2">
-                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors text-white"><span class="material-symbols-outlined text-sm">photo_camera</span></a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors text-white"><span class="material-symbols-outlined text-sm">language</span></a>
-                        </div>
+                    <div class="flex flex-col gap-4 text-sm text-slate-400">
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-brandAccent">mail</span> hello@mangsityouth.com</div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-brandAccent">call</span> +62 859 5920 2456</div>
                     </div>
                 </div>
             </div>
             
-            <hr class="border-gray-800 mb-8" />
-            
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <hr class="border-slate-800 mb-8" />
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
                 <div class="text-center md:text-left">© 2024 Mangsit Youth Hub. Island Precision, Local Heart.</div>
-                <div class="flex gap-6">
-                    <a class="hover:text-gray-300 transition-colors" href="#">Privacy Policy</a>
-                    <a class="hover:text-gray-300 transition-colors" href="#">Terms of Service</a>
-                </div>
+                <div class="flex gap-6"><a class="hover:text-slate-300 transition-colors" href="#">Privacy Policy</a><a class="hover:text-slate-300 transition-colors" href="#">Terms of Service</a></div>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/6285959202456" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_25px_-5px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform z-[90] flex items-center justify-center group" aria-label="Chat WhatsApp">
+    <a href="https://wa.me/6285959202456" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_25px_-5px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform z-50 flex items-center justify-center group" aria-label="Chat WhatsApp">
         <span class="material-symbols-outlined text-3xl icon-filled">chat</span>
-        <span class="absolute right-full mr-4 bg-white text-primary text-sm font-bold py-2 px-4 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap" data-i18n="fab_text">Butuh bantuan? Chat kami!</span>
+        <span class="absolute right-full mr-4 bg-white text-brandDark text-sm font-bold py-2 px-4 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap" data-i18n="fab_text">Butuh bantuan? Chat kami!</span>
     </a>
 
-    <div id="service-modal" class="fixed inset-0 z-[100] hidden bg-primary/60 backdrop-blur-md opacity-0 transition-opacity duration-300 flex items-center justify-center px-4 py-8">
-        
-        <div id="modal-content-container" class="bg-white rounded-[2rem] max-w-md w-full shadow-2xl relative flex flex-col overflow-hidden max-h-[90vh] transform scale-95 translate-y-8 opacity-0 transition-all duration-300">
-            
-            <div class="relative w-full h-48 shrink-0 bg-gray-200">
-                <img id="modal-image" src="img/nmax.png" alt="Service Image" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent"></div>
-                
-                <button onclick="closeModal()" class="absolute top-4 right-4 text-white hover:text-secondary bg-white/20 backdrop-blur-md border border-white/30 rounded-full p-2 shadow-sm transition-all hover:scale-110 z-10 flex items-center justify-center" aria-label="Tutup Modal">
-                    <span class="material-symbols-outlined text-2xl block">close</span>
-                </button>
-            </div>
+    <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-brandDark/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="modal-container" class="relative w-full max-w-md scale-95 transform overflow-hidden rounded-3xl bg-white p-6 md:p-8 shadow-2xl transition-all duration-300 border border-slate-200">
+            <button onclick="closeBookingWizard()" class="absolute right-4 top-4 text-brandMuted hover:text-brandAccent focus:outline-none rounded-full p-2 bg-surfaceVariant transition-colors">
+                <span class="material-symbols-outlined block">close</span>
+            </button>
 
-            <div class="px-6 pb-4 shrink-0 text-center -mt-6 relative z-10 bg-white rounded-t-3xl border-b border-outline-variant/30">
-                <h3 id="modal-title" class="font-['Plus_Jakarta_Sans'] text-2xl font-extrabold text-primary pt-2 mb-2">Judul Layanan</h3>
-                <div id="modal-price-badge" class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 border border-blue-100 font-bold px-5 py-2 rounded-full text-sm shadow-sm">
-                    <span class="material-symbols-outlined icon-filled text-sm">sell</span>
-                    <span id="modal-price-text">Mulai IDR 75.000 / Hari</span>
+            <div class="flex items-center gap-4 border-b border-slate-100 pb-5 mb-5 mt-2">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-orange-50 text-brandAccent shadow-inner">
+                    <span id="wizard-icon" class="material-symbols-outlined text-2xl icon-filled">info</span>
+                </div>
+                <div>
+                    <h3 id="wizard-service-title" class="text-xl font-extrabold text-brandDark">Detail Pemesanan</h3>
+                    <p class="text-xs font-semibold text-brandMuted uppercase tracking-wider mt-1" data-i18n="wizard_subtitle">Konfigurasi Sewa</p>
                 </div>
             </div>
 
-            <div id="modal-scroll-area" class="px-6 py-6 overflow-y-auto flex-grow relative bg-surface-variant/20">
-                <div id="modal-desc" class="text-on-surface-variant text-sm leading-relaxed">
-                    Deskripsi lengkap layanan akan muncul di sini.
+            <div class="space-y-5">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-brandDark mb-1" data-i18n="lbl_start_date">Tanggal Eksekusi</label>
+                    <input type="date" id="book-date" onchange="calculateLiveTotal()" class="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-brandDark shadow-sm focus:border-brandAccent focus:outline-none focus:ring-2 focus:ring-brandAccent bg-surfaceVariant cursor-pointer">
                 </div>
-            </div>
 
-            <div class="shrink-0 relative px-6 py-5 bg-white border-t border-outline-variant/30 rounded-b-[2rem]">
-                <div class="absolute bottom-full left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-                <button onclick="sendWhatsApp()" class="w-full bg-[#25D366] text-white font-bold px-6 py-4 rounded-xl shadow-floating hover:bg-[#20b858] transition-colors active:scale-95 flex items-center justify-center gap-2">
+                <div id="duration-wrapper">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-brandDark mb-1" data-i18n="lbl_duration">Durasi / Jumlah</label>
+                    <div class="relative">
+                        <select id="book-duration" onchange="calculateLiveTotal()" class="w-full appearance-none rounded-xl border border-slate-200 py-3 pl-4 pr-10 text-sm font-semibold shadow-sm focus:border-brandAccent focus:outline-none focus:ring-2 focus:ring-brandAccent bg-surfaceVariant cursor-pointer">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="7">7</option>
+                        </select>
+                        <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-brandMuted material-symbols-outlined text-sm">expand_more</span>
+                    </div>
+                </div>
+
+                <div id="route-wrapper" class="hidden">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-brandDark mb-1" data-i18n="lbl_route">Pilih Rute</label>
+                    <div class="relative">
+                        <select id="book-route" onchange="calculateLiveTotal()" class="w-full appearance-none rounded-xl border border-slate-200 py-3 pl-4 pr-10 text-sm font-semibold shadow-sm focus:border-brandAccent focus:outline-none focus:ring-2 focus:ring-brandAccent bg-surfaceVariant cursor-pointer">
+                            <option value="350000" data-name="Bandara ↔ Kuta Lombok">Bandara ↔ Kuta Lombok</option>
+                            <option value="500000" data-name="Bandara ↔ Senggigi">Bandara ↔ Senggigi</option>
+                            <option value="550000" data-name="Senggigi ↔ Senaru">Senggigi ↔ Senaru</option>
+                            <option value="600000" data-name="Bandara ↔ Bangsal">Bandara ↔ Bangsal Harbor</option>
+                            <option value="700000" data-name="Bandara ↔ Senaru">Bandara ↔ Senaru</option>
+                        </select>
+                        <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-brandMuted material-symbols-outlined text-sm">expand_more</span>
+                    </div>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 bg-white p-3 shadow-sm hover:border-brandAccent transition-colors">
+                    <label class="flex items-center gap-3 cursor-pointer w-full">
+                        <input type="checkbox" id="book-addon" onchange="calculateLiveTotal()" class="h-5 w-5 rounded border-slate-300 text-brandAccent focus:ring-brandAccent">
+                        <div class="text-sm flex-grow">
+                            <p class="font-bold text-brandDark" id="addon-label-text">Proteksi Ekstra</p>
+                            <p class="text-xs text-brandMuted mt-0.5" data-i18n="addon_desc">Fasilitas kenyamanan premium</p>
+                        </div>
+                        <div class="text-xs font-bold text-brandAccent" id="addon-price-label">+ Rp</div>
+                    </label>
+                </div>
+
+                <div class="rounded-2xl bg-brandDark text-white p-5 shadow-lg relative overflow-hidden mt-2">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/5"></div>
+                    
+                    <div class="flex justify-between text-xs text-slate-300 relative z-10 font-medium tracking-wide">
+                        <span data-i18n="total_estimate">Estimasi Total Biaya</span>
+                        <span id="summary-currency-label" class="font-bold">IDR</span>
+                    </div>
+                    <div class="mt-2 flex items-baseline justify-between relative z-10">
+                        <span id="wizard-total-display" class="text-3xl font-extrabold text-white tracking-tight">Rp 0</span>
+                        <span class="text-xs bg-orange-500/20 text-orange-300 px-2 py-1 rounded border border-orange-500/30 font-bold" data-i18n="pay_on_spot">Bayar di Tempat</span>
+                    </div>
+                </div>
+
+                <button onclick="submitBookingToWhatsApp()" class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#25D366] py-4 font-extrabold text-white shadow-floating transition-all hover:bg-[#20b858] hover:-translate-y-1 active:scale-95">
                     <span class="material-symbols-outlined icon-filled">chat</span>
-                    <span data-i18n="form_submit">Pesan / Tanya via WhatsApp</span>
+                    <span data-i18n="btn_confirm_wa">Konfirmasi via WhatsApp</span>
                 </button>
             </div>
-
         </div>
-        <div onclick="closeModal()" class="absolute inset-0 -z-10 cursor-pointer"></div>
     </div>
-    <script>
-        // Mobile Menu Script
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-        mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
 
-        // Database Gambar & Harga untuk Modal
-        const serviceDetails = {
-            '1': { img: 'img/nmax.png', priceKey: 'srv_1_price' },
-            '2': { img: 'img/papan.png', priceKey: 'srv_2_price' },
-            '3': { img: 'img/selam.png', priceKey: 'srv_3_price' },
-            '4': { img: 'img/kain.png', priceKey: 'srv_4_price' },
-            '5': { img: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80', priceKey: 'srv_5_price' }
+    <script>
+        const ADMIN_WA_NUMBER = "6285959202456";
+        
+        // Exchange Rates (Base: IDR)
+        const exchangeRates = { IDR: 1, USD: 16000, AUD: 10500 };
+        const currencyFormats = {
+            IDR: { prefix: 'Rp ', locale: 'id-ID', frac: 0 },
+            USD: { prefix: '$', locale: 'en-US', frac: 2 },
+            AUD: { prefix: 'A$', locale: 'en-AU', frac: 2 }
         };
 
+        let currentLang = 'id';
+        let currentCurr = 'IDR';
+        let activeServiceId = null;
+
+        // Configuration for Modal Services
+        const serviceData = {
+            '1': { type: 'daily', baseIDR: 75000, addonIDR: 20000, icon: 'two_wheeler' },
+            '2': { type: 'daily', baseIDR: 50000, addonIDR: 15000, icon: 'surfing' },
+            '3': { type: 'daily', baseIDR: 35000, addonIDR: 10000, icon: 'scuba_diving' },
+            '4': { type: 'item', baseIDR: 25000, addonIDR: 0, icon: 'beach_access' },
+            '5': { type: 'route', baseIDR: 0, addonIDR: 0, icon: 'directions_car' } 
+        };
+
+        // Comprehensive Dictionary
         const translations = {
-            'id': {
-                'nav_services': 'Layanan', 'nav_about': 'Tentang Kami', 'nav_booking': 'Cara Pesan', 'nav_contact': 'Kontak', 'nav_reviews': 'Ulasan', 'nav_faq': 'FAQ',
-                'btn_book_now': 'Pesan Sekarang', 'btn_explore': 'Lihat Layanan', 'btn_whatsapp': 'WhatsApp Concierge', 'fab_text': 'Butuh bantuan? Chat kami!',
-                'hero_badge': 'Island Precision, Local Heart',
-                'hero_title': 'Standar Baru Liburan Anda di Senggigi.',
-                'hero_desc': 'Menghubungkan Anda dengan layanan lokal otentik melalui standar keamanan dan profesionalisme kelas dunia.',
-                'trust_1': 'Mitra Terverifikasi', 'trust_2': 'Keamanan Prioritas', 'trust_3': 'Dukungan 24/7', 'trust_4': 'Kualitas Premium',
+            id: {
+                nav_services: 'Layanan', nav_about: 'Tentang', nav_reviews: 'Ulasan', nav_faq: 'FAQ',
+                hero_badge: 'Island Precision, Local Heart',
+                hero_title: 'Standar Baru Liburan Anda di <span class="text-brandAccent">Senggigi.</span>',
+                hero_desc: 'Menghubungkan Anda dengan layanan lokal otentik melalui standar keamanan dan profesionalisme kelas dunia.',
+                btn_explore: 'Lihat Layanan',
+                trust_1: 'Mitra Terverifikasi', trust_2: 'Keamanan Prioritas', trust_3: 'Dukungan 24/7', trust_4: 'Kualitas Premium',
+                badge_eco_title: 'Pemberdayaan Lokal', badge_eco_desc: '100% Dukungan Warga',
+                about_subtitle: 'Kisah Kami', about_title: 'Lebih dari Sekadar Layanan',
+                about_desc_1: 'Mangsit Youth Hub adalah gerakan pemberdayaan ekonomi lokal berbasis teknologi. Lahir dari inisiatif pemuda Dusun Mangsit, kami hadir untuk mengangkat potensi para pelaku usaha jasa di lingkungan kami agar mampu beradaptasi dan bersaing di pasar global.',
+                about_desc_2: '"Setiap pesanan Anda bukanlah sekadar transaksi, melainkan dukungan langsung untuk menghidupkan perekonomian warga setempat dan mendorong digitalisasi pariwisata di Senggigi."',
+                service_subtitle: 'Eksplorasi Tanpa Batas', service_title: 'Katalog Layanan Presisi',
+                badge_popular: 'Populer', badge_premium: 'Premium Fleet',
+                price_start: 'Mulai', btn_book: 'Pesan', btn_check_route: 'Cek Harga Rute',
+                srv_1_title: 'Sewa Motor', srv_1_desc: 'Skuter handal, terawat, dan diantar langsung ke vila Anda. Termasuk 2 helm.',
+                srv_2_title: 'Papan Selancar', srv_2_desc: 'Berbagai ukuran papan untuk pemula hingga profesional. Lokasi dekat surf spot.',
+                srv_3_title: 'Alat Snorkeling', srv_3_desc: 'Masker sanitasi, sirip, dan pelampung untuk eksplorasi bawah laut yang aman.',
+                srv_4_title: 'Kain Pantai Premium', srv_4_desc: 'Kain pantai tebal, nyaman, dan cepat kering dengan desain tropis elegan.',
+                srv_5_title: 'Transportasi & Antar Jemput', srv_5_desc: 'Layanan mobil (Innova/Avanza) & sopir profesional untuk antar jemput bandara dan eksplorasi area wisata Lombok dengan aman dan nyaman.',
+                badge_service: 'Cakupan Layanan', radius_title: 'Gratis Antar Jemput Area Senggigi',
+                radius_desc: 'Kami memastikan kenyamanan maksimal. Pesan secara online, dan tim kami akan mengantarkan kendaraan atau peralatan langsung ke lobi hotel maupun vila Anda di sepanjang pesisir Senggigi hingga Mangsit.',
+                testi_subtitle: 'Ulasan Pelanggan', testi_title: 'Apa Kata Mereka?',
+                testi_1_text: '"Layanan sewa motor paling terpercaya di Senggigi! Motornya baru, bersih, dan diantar tepat waktu ke vila kami. Pasti akan pesan lagi."',
+                testi_2_text: '"Sopir transport sangat sopan dan mengemudi dengan aman dari bandara ke Senggigi. Harga transparan tanpa biaya tersembunyi. Sangat direkomendasikan!"',
+                testi_3_text: '"Menyewa papan selancar di sini sangat mudah. Alatnya premium dan staf membalas WhatsApp dengan sangat cepat. Terbaik di Mangsit!"',
+                faq_subtitle: 'Informasi Penting', faq_title: 'Pertanyaan Umum',
+                faq_1_q: 'Bagaimana sistem jaminan untuk sewa alat/motor?', faq_1_a: 'Demi keamanan bersama, kami hanya memerlukan foto KTP/Paspor Anda yang dikirim via WhatsApp saat pemesanan. Tidak ada penahanan dokumen asli atau deposit uang yang rumit.',
+                faq_2_q: 'Apakah harga transportasi sudah final?', faq_2_a: 'Ya, harga yang tertera di daftar kami adalah harga NETT per mobil. Sudah termasuk bensin, jasa sopir profesional, dan biaya parkir. Tidak ada biaya tersembunyi.',
+                faq_3_q: 'Bagaimana jika terjadi kendala / kerusakan di jalan?', faq_3_a: 'Semua alat dan kendaraan kami dirawat rutin. Namun jika terjadi kendala teknis alami, tim kami siap memberikan bantuan darurat atau penggantian unit secepatnya di area Senggigi secara gratis.',
+                process_title: 'Cara Pemesanan',
+                proc_1_title: '1. Pilih Layanan', proc_1_desc: 'Gunakan kalkulator harga di website kami dan klik pesan untuk terhubung ke WhatsApp.',
+                proc_2_title: '2. Konfirmasi Detail', proc_2_desc: 'Admin lokal kami akan memverifikasi kebutuhan, waktu, dan lokasi pengantaran Anda dengan cepat.',
+                proc_3_title: '3. Nikmati Liburan', proc_3_desc: 'Layanan/barang diantar tepat waktu ke lokasi Anda. Saatnya menikmati keindahan Lombok!',
+                contact_subtitle: 'Selalu Hadir Untuk Anda', contact_title: 'Hubungi Kami', contact_desc: 'Punya pertanyaan khusus atau ingin berkonsultasi mengenai itinerary? Tim lokal kami siap membantu merencanakan liburan sempurna Anda.',
+                btn_whatsapp: 'WhatsApp Concierge', fab_text: 'Butuh bantuan? Chat kami!',
+                footer_desc: 'Platform digital concierge terdepan di Senggigi. Memberdayakan bisnis lokal dengan standar hospitality internasional.',
+                footer_quick_links: 'Tautan Cepat', footer_services: 'Layanan Populer', footer_contact: 'Kontak Kami',
                 
-                'about_subtitle': 'Kisah Kami', 'about_title': 'Lebih dari Sekadar Layanan',
-                'badge_eco_title': 'Pemberdayaan Lokal', 'badge_eco_desc': '100% Dukungan Warga',
-                'about_desc_1': 'Mangsit Youth Hub adalah gerakan pemberdayaan ekonomi lokal berbasis teknologi. Lahir dari inisiatif pemuda Dusun Mangsit, kami hadir untuk mengangkat potensi pelaku usaha jasa di lingkungan kami agar mampu bersaing di pasar global.',
-                'about_desc_2': '"Setiap pesanan Anda bukanlah sekadar transaksi, melainkan dukungan langsung untuk menghidupkan perekonomian warga setempat dan mendorong digitalisasi pariwisata Senggigi."',
-                
-                'service_subtitle': 'Eksplorasi Tanpa Batas', 'service_title': 'Layanan Presisi Pulau',
-                'srv_1_badge': 'Populer', 'srv_1_title': 'Sewa Motor', 'srv_1_desc': 'Skuter handal, terawat, dan diantar langsung ke vila Anda.',
-                'srv_1_price': 'Mulai IDR 75.000 / Hari',
-                'srv_2_title': 'Papan Selancar', 'srv_2_desc': 'Papan premium untuk semua tingkat kemahiran di pantai.',
-                'srv_2_price': 'Mulai IDR 50.000 / Sesi',
-                'srv_3_title': 'Alat Snorkeling', 'srv_3_desc': 'Masker sanitasi, sirip, dan pelampung untuk eksplorasi aman.',
-                'srv_3_price': 'IDR 35.000 / Set',
-                'srv_4_title': 'Kain Pantai', 'srv_4_desc': 'Kain pantai premium dengan desain tropis, nyaman dan cepat kering.',
-                'srv_4_price': 'Mulai IDR 25.000 / Lembar',
-                'srv_5_badge': 'Premium Fleet', 'srv_5_title': 'Transportasi & Antar Jemput', 'srv_5_desc': 'Layanan mobil & sopir profesional untuk antar jemput bandara dan eksplorasi area wisata Lombok dengan aman dan nyaman.',
-                'srv_5_price': 'Cek Daftar Harga di Bawah',
-
-                'testi_subtitle': 'Ulasan Pelanggan', 'testi_title': 'Apa Kata Mereka?',
-                'testi_1_text': '"Layanan sewa motor paling terpercaya di Senggigi! Motornya baru, bersih, dan diantar tepat waktu ke vila kami. Pasti akan pesan lagi."', 'testi_1_name': 'Michael T.',
-                'testi_2_text': '"Sopir transport sangat sopan dan mengemudi dengan aman dari bandara ke Senggigi. Harga transparan tanpa biaya tersembunyi. Sangat direkomendasikan!"', 'testi_2_name': 'Sarah & John',
-                'testi_3_text': '"Menyewa papan selancar di sini sangat mudah. Alatnya premium dan staf membalas WhatsApp dengan sangat cepat. Terbaik di Mangsit!"', 'testi_3_name': 'Andi W.',
-
-                'faq_subtitle': 'Informasi Penting', 'faq_title': 'Pertanyaan Umum',
-                'faq_1_q': 'Bagaimana sistem jaminan untuk sewa alat/motor?', 'faq_1_a': 'Demi keamanan bersama, kami hanya memerlukan foto KTP/Paspor Anda yang dikirim via WhatsApp saat pemesanan. Tidak ada penahanan dokumen asli atau deposit uang yang rumit.',
-                'faq_2_q': 'Apakah harga transportasi sudah final?', 'faq_2_a': 'Ya, harga yang tertera di daftar kami adalah harga NETT per mobil. Sudah termasuk bensin, jasa sopir profesional, dan biaya parkir. Tidak ada biaya tersembunyi.',
-                'faq_3_q': 'Bagaimana jika terjadi kendala / kerusakan di jalan?', 'faq_3_a': 'Semua alat dan kendaraan kami dirawat rutin. Namun jika terjadi kendala teknis, tim kami siap memberikan bantuan darurat atau penggantian unit secepatnya di area Senggigi secara gratis.',
-
-                'modal_desc_1': '<div class="text-left"><p class="mb-3">Dapatkan skuter handal dan terawat dengan baik. <b>Gratis biaya pengantaran dan penjemputan</b> di area Senggigi.</p><ul class="list-disc pl-5 space-y-1 text-primary font-medium"><li>Termasuk 2 helm standar SNI bersih</li><li>Termasuk jas hujan</li><li>Servis berkala bengkel resmi</li><li>Bantuan darurat 24/7</li></ul></div>',
-                'modal_desc_2': '<div class="text-left"><p class="mb-3">Tersedia berbagai ukuran papan selancar (Softboard & Hardboard) cocok untuk pemula hingga profesional.</p><ul class="list-disc pl-5 space-y-1 text-primary font-medium"><li>Papan disanitasi & di-wax rutin</li><li>Beragam ukuran (6.0 - 9.0 ft)</li><li>Diantar langsung ke pantai</li><li>Leash premium anti-putus</li></ul></div>',
-                'modal_desc_3': '<div class="text-left"><p class="mb-3">Eksplorasi keindahan bawah laut Senggigi dengan peralatan snorkeling standar menyelam kami yang disanitasi ketat.</p><ul class="list-disc pl-5 space-y-1 text-primary font-medium"><li>Masker Anti-Fog (Anti Embun)</li><li>Snorkel dengan katup pembuangan</li><li>Sepatu katak (Fins) berbagai ukuran</li><li>Pelampung (opsional)</li></ul></div>',
-                'modal_desc_4': '<div class="text-left"><p class="mb-3">Kain pantai berkualitas tinggi (Microfiber) yang cepat kering dan lembut di kulit.</p><ul class="list-disc pl-5 space-y-1 text-primary font-medium"><li>Tahan terhadap sinar matahari</li><li>Ukuran besar 150x150cm</li><li>Berbagai pilihan desain tropis</li><li>Selalu dicuci bersih & wangi</li></ul></div>',
-                'modal_desc_5': `
-                    <div class="text-left w-full text-sm">
-                        <p class="mb-4 text-on-surface">Harga berlaku per kendaraan <b>(maksimum 4 penumpang)</b> dan sudah termasuk <b>sopir, BBM, serta parkir</b>.</p>
-                        
-                        <h4 class="font-bold text-primary mt-4 mb-2">1. Antar Jemput Bandara</h4>
-                        <ul class="list-none mb-4 space-y-2 text-on-surface-variant">
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Bandara ↔ Kuta Lombok</span> <span class="font-bold text-primary">IDR 350k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Bandara ↔ Senggigi</span> <span class="font-bold text-primary">IDR 500k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Bandara ↔ Bangsal</span> <span class="font-bold text-primary">IDR 600k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Bandara ↔ Senaru</span> <span class="font-bold text-primary">IDR 700k</span></li>
-                        </ul>
-                        
-                        <h4 class="font-bold text-primary mt-4 mb-2">2. Transfer Area Wisata</h4>
-                        <ul class="list-none mb-4 space-y-2 text-on-surface-variant">
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Bangsal ↔ Senaru</span> <span class="font-bold text-primary">IDR 500k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Senggigi ↔ Senaru</span> <span class="font-bold text-primary">IDR 550k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Senggigi ↔ Kuta Lombok</span> <span class="font-bold text-primary">IDR 550k</span></li>
-                        </ul>
-                        
-                        <div class="bg-surface p-4 rounded-xl mt-6 border border-outline-variant/50 shadow-sm">
-                            <h4 class="font-bold text-primary mb-1 flex items-center gap-1"><span class="material-symbols-outlined text-sm">directions_car</span> Pilihan Armada</h4>
-                            <p class="text-xs text-on-surface-variant">Avanza/Ertiga (1-4 pax), Innova Reborn (1-5 pax), SUV, hingga Hiace (12 pax). Hubungi kami untuk harga armada besar!</p>
-                        </div>
-                    </div>`,
-                
-                'form_submit': 'Pesan via WhatsApp',
-                'process_title': 'Cara Pemesanan',
-                'proc_1_title': '1. Pilih Layanan', 'proc_1_desc': 'Pilih layanan di website dan klik pesan untuk terhubung ke WhatsApp kami.',
-                'proc_2_title': '2. Konfirmasi Detail', 'proc_2_desc': 'Admin kami memverifikasi kebutuhan, waktu, dan lokasi pengantaran Anda.',
-                'proc_3_title': '3. Nikmati Liburan', 'proc_3_desc': 'Layanan diantar tepat waktu ke lokasi. Saatnya menikmati keindahan Lombok!',
-                'contact_subtitle': 'Selalu Hadir Untuk Anda', 'contact_title': 'Hubungi Kami', 'contact_desc': 'Punya pertanyaan khusus atau butuh rekomendasi itinerary? Tim lokal kami siap membantu.',
-                'footer_desc': 'Platform digital concierge terdepan di Senggigi. Memberdayakan bisnis lokal dengan standar hospitality internasional.',
-                'footer_quick_links': 'Tautan Cepat', 'footer_services': 'Layanan Populer', 'footer_contact': 'Kontak Kami'
+                // Modal specific
+                wizard_subtitle: 'Konfigurasi Sewa', lbl_start_date: 'Tanggal Eksekusi', lbl_duration: 'Durasi / Jumlah', lbl_route: 'Pilih Rute',
+                addon_desc: 'Fasilitas kenyamanan premium', total_estimate: 'Estimasi Total Biaya', pay_on_spot: 'Bayar di Tempat', btn_confirm_wa: 'Konfirmasi via WhatsApp',
+                addon_title_1: 'Jas Hujan Ekstra & Prioritas', addon_title_2: 'Wetsuit & Tali Safety', addon_title_3: 'Cairan Anti-Fog Khusus', addon_title_4: 'Layanan Lipat Premium', addon_title_5: 'Tanpa Ekstra'
             },
-            'en': {
-                'nav_services': 'Services', 'nav_about': 'About Us', 'nav_booking': 'How to Book', 'nav_contact': 'Contact', 'nav_reviews': 'Reviews', 'nav_faq': 'FAQ',
-                'btn_book_now': 'Book Now', 'btn_explore': 'Explore Services', 'btn_whatsapp': 'WhatsApp Concierge', 'fab_text': 'Need help? Chat with us!',
-                'hero_badge': 'Island Precision, Local Heart',
-                'hero_title': 'The New Standard for Your Senggigi Holiday.',
-                'hero_desc': 'Connecting you with authentic local services backed by world-class safety and professionalism standards.',
-                'trust_1': 'Verified Partners', 'trust_2': 'Safety First', 'trust_3': '24/7 Support', 'trust_4': 'Premium Quality',
+            en: {
+                nav_services: 'Services', nav_about: 'About', nav_reviews: 'Reviews', nav_faq: 'FAQ',
+                hero_badge: 'Island Precision, Local Heart',
+                hero_title: 'The New Standard for Your <span class="text-brandAccent">Senggigi</span> Holiday.',
+                hero_desc: 'Connecting you with authentic local services backed by world-class safety and professionalism standards.',
+                btn_explore: 'Explore Services',
+                trust_1: 'Verified Partners', trust_2: 'Safety First', trust_3: '24/7 Support', trust_4: 'Premium Quality',
+                badge_eco_title: 'Local Empowerment', badge_eco_desc: '100% Community Support',
+                about_subtitle: 'Our Story', about_title: 'More Than Just a Service',
+                about_desc_1: 'Mangsit Youth Hub is a technology-driven movement for local economic empowerment. Born from the youth of Mangsit, our mission is to elevate local service providers, helping them adapt and reach a global market.',
+                about_desc_2: '"Every booking you make is more than just a transaction—it is direct support that fuels the local economy and drives the digitalization of tourism in Senggigi."',
+                service_subtitle: 'Endless Exploration', service_title: 'Precision Services Catalog',
+                badge_popular: 'Popular', badge_premium: 'Premium Fleet',
+                price_start: 'From', btn_book: 'Book', btn_check_route: 'Check Route Price',
+                srv_1_title: 'Motorbike Rental', srv_1_desc: 'Reliable, well-maintained scooters delivered directly to your villa. 2 helmets included.',
+                srv_2_title: 'Surfboard Rental', srv_2_desc: 'Premium boards for all skill levels. Located near the best surf spots.',
+                srv_3_title: 'Snorkeling Gear', srv_3_desc: 'Sanitized masks, fins, and floaties for safe underwater exploration.',
+                srv_4_title: 'Premium Beach Towel', srv_4_desc: 'Thick, comfortable, quick-drying beach towels with elegant tropical designs.',
+                srv_5_title: 'Transport & Transfer', srv_5_desc: 'Professional car & driver service for safe and comfortable airport transfers and island tours.',
+                badge_service: 'Service Coverage', radius_title: 'Free Delivery Across Senggigi',
+                radius_desc: 'We ensure maximum convenience. Book online, and our team will deliver vehicles or equipment directly to your hotel lobby or villa along the Senggigi coastal area.',
+                testi_subtitle: 'Guest Reviews', testi_title: 'What They Say?',
+                testi_1_text: '"Most reliable scooter rental in Senggigi! The bike was new, clean, and delivered right on time to our villa. Will definitely book again."',
+                testi_2_text: '"Our driver was very polite and drove safely from the airport. Transparent pricing with no hidden fees. Highly recommended!"',
+                testi_3_text: '"Renting surfboards here was a breeze. Premium gear and the staff replied to WhatsApp instantly. Best in Mangsit!"',
+                faq_subtitle: 'Important Info', faq_title: 'Frequently Asked Questions',
+                faq_1_q: 'What is the deposit system for rentals?', faq_1_a: 'For mutual security, we only require a photo of your ID/Passport sent via WhatsApp during booking. We do not hold original documents or require complicated cash deposits.',
+                faq_2_q: 'Are the transport prices final?', faq_2_a: 'Yes, our listed prices are NETT per car. It includes fuel, professional driver service, and parking fees. No hidden costs.',
+                faq_3_q: 'What happens if there is a breakdown on the road?', faq_3_a: 'All our gear and vehicles are routinely maintained. However, in case of technical issues, our team provides free emergency assistance or immediate unit replacement in the Senggigi area.',
+                process_title: 'How to Book',
+                proc_1_title: '1. Choose Service', proc_1_desc: 'Use our pricing calculator and click book to connect to our WhatsApp.',
+                proc_2_title: '2. Confirm Details', proc_2_desc: 'Our local admin will quickly verify your requirements, time, and delivery location.',
+                proc_3_title: '3. Enjoy Holiday', proc_3_desc: 'Items delivered on time in pristine condition. Time to enjoy Lombok!',
+                contact_subtitle: 'Always Here For You', contact_title: 'Contact Us', contact_desc: 'Have specific questions or need itinerary recommendations? Our local team is ready to help plan your perfect holiday.',
+                btn_whatsapp: 'WhatsApp Concierge', fab_text: 'Need help? Chat with us!',
+                footer_desc: 'Leading digital concierge platform in Senggigi. Empowering local businesses with international hospitality standards.',
+                footer_quick_links: 'Quick Links', footer_services: 'Popular Services', footer_contact: 'Contact Us',
                 
-                'about_subtitle': 'Our Story', 'about_title': 'More Than Just a Service',
-                'badge_eco_title': 'Local Empowerment', 'badge_eco_desc': '100% Community Support',
-                'about_desc_1': 'Mangsit Youth Hub is a technology-driven movement for local economic empowerment. Born from the youth of Mangsit, our mission is to elevate local service providers, helping them adapt and reach a global market.',
-                'about_desc_2': '"Every booking you make is more than just a transaction—it is direct support that fuels the local economy and drives the digitalization of tourism in Senggigi."',
-                
-                'service_subtitle': 'Endless Exploration', 'service_title': 'Island Precision Services',
-                'srv_1_badge': 'Popular', 'srv_1_title': 'Motorbike Rental', 'srv_1_desc': 'Reliable, well-maintained scooters delivered directly to your villa.',
-                'srv_1_price': 'From IDR 75,000 / Day',
-                'srv_2_title': 'Surfboard Rental', 'srv_2_desc': 'Premium boards for all skill levels right at the beach.',
-                'srv_2_price': 'From IDR 50,000 / Session',
-                'srv_3_title': 'Snorkeling Gear', 'srv_3_desc': 'Sanitized masks, fins, and floaties for safe exploration.',
-                'srv_3_price': 'IDR 35,000 / Set',
-                'srv_4_title': 'Beach Towel', 'srv_4_desc': 'Premium beach towels with tropical designs, comfortable and quick-drying.',
-                'srv_4_price': 'From IDR 25,000 / Item',
-                'srv_5_badge': 'Premium Fleet', 'srv_5_title': 'Transport & Transfer', 'srv_5_desc': 'Professional car & driver service for safe and comfortable airport transfers and island tours.',
-                'srv_5_price': 'Check Price List Below',
-
-                'testi_subtitle': 'Guest Reviews', 'testi_title': 'What They Say?',
-                'testi_1_text': '"Most reliable scooter rental in Senggigi! The bike was new, clean, and delivered right on time to our villa. Will definitely book again."', 'testi_1_name': 'Michael T.',
-                'testi_2_text': '"Our driver was very polite and drove safely from the airport. Transparent pricing with no hidden fees. Highly recommended!"', 'testi_2_name': 'Sarah & John',
-                'testi_3_text': '"Renting surfboards here was a breeze. Premium gear and the staff replied to WhatsApp instantly. Best in Mangsit!"', 'testi_3_name': 'Andi W.',
-
-                'faq_subtitle': 'Important Info', 'faq_title': 'Frequently Asked Questions',
-                'faq_1_q': 'What is the deposit system for rentals?', 'faq_1_a': 'For mutual security, we only require a photo of your ID/Passport sent via WhatsApp during booking. We do not hold original documents or require complicated cash deposits.',
-                'faq_2_q': 'Are the transport prices final?', 'faq_2_a': 'Yes, our listed prices are NETT per car. It includes fuel, professional driver service, and parking fees. No hidden costs.',
-                'faq_3_q': 'What happens if there is a breakdown on the road?', 'faq_3_a': 'All our gear and vehicles are routinely maintained. However, in case of technical issues, our team provides free emergency assistance or immediate unit replacement in the Senggigi area.',
-
-                'modal_desc_1': '<div class="text-left"><p class="mb-3">Get a reliable and well-maintained scooter. <b>Free delivery and pick-up</b> in the Senggigi area.</p><ul class="list-disc pl-5 space-y-1 text-primary font-medium"><li>Includes 2 clean SNI-standard helmets</li><li>Includes raincoats</li><li>Routinely serviced</li><li>24/7 emergency roadside assistance</li></ul></div>',
-                'modal_desc_2': '<div class="text-left"><p class="mb-3">Various surfboard sizes available suitable for beginners to professionals.</p><ul class="list-disc pl-5 space-y-1 text-primary font-medium"><li>Boards are sanitized & waxed regularly</li><li>Various sizes (6.0 - 9.0 ft)</li><li>Delivered directly to the beach</li><li>Premium unbroken leashes</li></ul></div>',
-                'modal_desc_3': '<div class="text-left"><p class="mb-3">Explore underwater beauty with our strictly sanitized snorkeling gear.</p><ul class="list-disc pl-5 space-y-1 text-primary font-medium"><li>Anti-Fog diving mask</li><li>Snorkel with purge valve</li><li>Fins in multiple sizes</li><li>Life jacket (optional)</li></ul></div>',
-                'modal_desc_4': '<div class="text-left"><p class="mb-3">High-quality beach towels (microfiber) that dry quickly and are soft on the skin.</p><ul class="list-disc pl-5 space-y-1 text-primary font-medium"><li>Sun-damage resistant</li><li>Large 150x150cm size</li><li>Various tropical designs</li><li>Always washed and fresh</li></ul></div>',
-                'modal_desc_5': `
-                    <div class="text-left w-full text-sm">
-                        <p class="mb-4 text-on-surface">Prices apply per vehicle <b>(max 4 pax)</b> and include <b>driver, fuel, and parking</b>.</p>
-                        
-                        <h4 class="font-bold text-primary mt-4 mb-2">1. Airport Transfers</h4>
-                        <ul class="list-none mb-4 space-y-2 text-on-surface-variant">
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Airport ↔ Kuta Lombok</span> <span class="font-bold text-primary">IDR 350k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Airport ↔ Senggigi</span> <span class="font-bold text-primary">IDR 500k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Airport ↔ Bangsal Harbor</span> <span class="font-bold text-primary">IDR 600k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Airport ↔ Senaru</span> <span class="font-bold text-primary">IDR 700k</span></li>
-                        </ul>
-                        
-                        <h4 class="font-bold text-primary mt-4 mb-2">2. Tourist Area Transfers</h4>
-                        <ul class="list-none mb-4 space-y-2 text-on-surface-variant">
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Bangsal ↔ Senaru</span> <span class="font-bold text-primary">IDR 500k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Senggigi ↔ Senaru</span> <span class="font-bold text-primary">IDR 550k</span></li>
-                            <li class="flex justify-between border-b border-outline-variant/30 pb-1"><span>Senggigi ↔ Kuta Lombok</span> <span class="font-bold text-primary">IDR 550k</span></li>
-                        </ul>
-                        
-                        <div class="bg-surface p-4 rounded-xl mt-6 border border-outline-variant/50 shadow-sm">
-                            <h4 class="font-bold text-primary mb-1 flex items-center gap-1"><span class="material-symbols-outlined text-sm">directions_car</span> Vehicle Options</h4>
-                            <p class="text-xs text-on-surface-variant">Avanza/Ertiga (1-4 pax), Innova Reborn (1-5 pax), SUVs, to Hiace (12 pax) available. Contact us for larger vehicles!</p>
-                        </div>
-                    </div>`,
-                
-                'form_submit': 'Book via WhatsApp',
-                'process_title': 'How to Book',
-                'proc_1_title': '1. Choose Service', 'proc_1_desc': 'Select your desired service and click book to connect to our WhatsApp.',
-                'proc_2_title': '2. Confirm Details', 'proc_2_desc': 'Our admin will quickly verify your requirements, time, and delivery location.',
-                'proc_3_title': '3. Enjoy Holiday', 'proc_3_desc': 'Items delivered on time in pristine condition. Time to enjoy Lombok!',
-                'contact_subtitle': 'Always Here For You', 'contact_title': 'Contact Us', 'contact_desc': 'Have specific questions or need itinerary recommendations? Our local team is ready to help.',
-                'footer_desc': 'Leading digital concierge platform in Senggigi. Empowering local businesses with international hospitality standards.',
-                'footer_quick_links': 'Quick Links', 'footer_services': 'Popular Services', 'footer_contact': 'Contact Us'
+                wizard_subtitle: 'Rental Configuration', lbl_start_date: 'Execution Date', lbl_duration: 'Duration / Quantity', lbl_route: 'Select Route',
+                addon_desc: 'Premium comfort amenities', total_estimate: 'Estimated Total Cost', pay_on_spot: 'Pay on Arrival', btn_confirm_wa: 'Confirm via WhatsApp',
+                addon_title_1: 'Extra Raincoat & Priority', addon_title_2: 'Wetsuit & Safety Leash', addon_title_3: 'Special Anti-Fog Drop', addon_title_4: 'Premium Fold Service', addon_title_5: 'No Extra'
             }
         };
+
+        // UI Engine
+        function formatCurr(valIDR, curr) {
+            if(valIDR === 0) return curr === 'IDR' ? 'Rp 0' : (curr === 'USD' ? '$ 0.00' : 'A$ 0.00');
+            const c = currencyFormats[curr];
+            const val = valIDR / exchangeRates[curr];
+            return `${c.prefix}${val.toLocaleString(c.locale, { minimumFractionDigits: c.frac, maximumFractionDigits: c.frac })}`;
+        }
+
+        function changeCurrency(curr) {
+            currentCurr = curr;
+            document.getElementById('currency-switch').value = curr;
+            document.getElementById('currency-switch-mobile').value = curr;
+            document.querySelectorAll('.data-price').forEach(el => {
+                el.textContent = formatCurr(parseFloat(el.getAttribute('data-idr')), curr);
+            });
+            if(activeServiceId) calculateLiveTotal();
+        }
 
         function changeLanguage(lang) {
+            currentLang = lang;
             document.getElementById('lang-switch').value = lang;
-            document.getElementById('lang-switch-mobile').value = lang;
-            document.documentElement.lang = lang; 
-            localStorage.setItem('preferredLanguage', lang);
-
+            document.documentElement.lang = lang;
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
+                if (translations[lang][key]) el.innerHTML = translations[lang][key];
             });
-            
-            if (currentServiceId && !document.getElementById('service-modal').classList.contains('hidden')) {
-                document.getElementById('modal-title').innerHTML = translations[lang][`srv_${currentServiceId}_title`];
-                document.getElementById('modal-desc').innerHTML = translations[lang][`modal_desc_${currentServiceId}`];
-                document.getElementById('modal-price-text').textContent = translations[lang][serviceDetails[currentServiceId].priceKey];
-            }
+            if(activeServiceId) updateWizardUI();
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            changeLanguage(localStorage.getItem('preferredLanguage') || 'id');
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
         });
 
-        let currentServiceId = '';
-        const ADMIN_WA_NUMBER = '6285959202456'; 
-
-        function openModal(serviceId) {
-            const currentLang = document.getElementById('lang-switch').value;
-            currentServiceId = serviceId; 
+        // Booking Wizard Logic
+        function openBookingWizard(id) {
+            activeServiceId = id;
+            const data = serviceData[id];
             
-            const modalOverlay = document.getElementById('service-modal');
-            const modalContainer = document.getElementById('modal-content-container');
-            const modalScrollArea = document.getElementById('modal-scroll-area');
+            // Set Default Date
+            const tmrw = new Date(); tmrw.setDate(tmrw.getDate() + 1);
+            document.getElementById('book-date').value = tmrw.toISOString().split('T')[0];
+            document.getElementById('book-duration').value = "1";
+            document.getElementById('book-addon').checked = false;
+            document.getElementById('wizard-icon').textContent = data.icon;
 
-            // Set Data Teks & Harga
-            document.getElementById('modal-title').innerHTML = translations[currentLang][`srv_${serviceId}_title`];
-            document.getElementById('modal-desc').innerHTML = translations[currentLang][`modal_desc_${serviceId}`];
-            document.getElementById('modal-price-text').textContent = translations[currentLang][serviceDetails[serviceId].priceKey];
-            
-            // Set Gambar Header
-            document.getElementById('modal-image').src = serviceDetails[serviceId].img;
-
-            // Atur Lebar Modal (Dinamis untuk Transport)
-            if (serviceId === '5') {
-                modalContainer.classList.remove('max-w-md'); modalContainer.classList.add('max-w-xl');
+            // Toggle Input visibility (Route vs Duration)
+            if(data.type === 'route') {
+                document.getElementById('duration-wrapper').classList.add('hidden');
+                document.getElementById('route-wrapper').classList.remove('hidden');
             } else {
-                modalContainer.classList.remove('max-w-xl'); modalContainer.classList.add('max-w-md');
+                document.getElementById('duration-wrapper').classList.remove('hidden');
+                document.getElementById('route-wrapper').classList.add('hidden');
             }
 
-            modalScrollArea.scrollTop = 0;
+            // Hide addon if price is 0 (like Towel or Transport)
+            const addonContainer = document.getElementById('book-addon').closest('.rounded-xl.border');
+            if(data.addonIDR === 0) addonContainer.classList.add('hidden');
+            else addonContainer.classList.remove('hidden');
 
-            // ANIMASI MUNCUL
-            modalOverlay.classList.remove('hidden'); 
-            void modalOverlay.offsetWidth; 
-            
-            modalOverlay.classList.remove('opacity-0');
-            modalOverlay.classList.add('opacity-100');
-            
-            modalContainer.classList.remove('scale-95', 'translate-y-8', 'opacity-0');
-            modalContainer.classList.add('scale-100', 'translate-y-0', 'opacity-100');
-            
-            document.body.style.overflow = 'hidden'; 
+            updateWizardUI();
+            calculateLiveTotal();
+
+            // Animate In
+            const modal = document.getElementById('booking-modal');
+            const container = document.getElementById('modal-container');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            container.classList.remove('scale-95'); container.classList.add('scale-100');
+            document.body.style.overflow = 'hidden';
         }
 
-        function closeModal() {
-            const modalOverlay = document.getElementById('service-modal');
-            const modalContainer = document.getElementById('modal-content-container');
-
-            // ANIMASI MENGHILANG
-            modalOverlay.classList.remove('opacity-100');
-            modalOverlay.classList.add('opacity-0');
-            
-            modalContainer.classList.remove('scale-100', 'translate-y-0', 'opacity-100');
-            modalContainer.classList.add('scale-95', 'translate-y-8', 'opacity-0');
-            
-            setTimeout(() => {
-                modalOverlay.classList.add('hidden');
-                document.body.style.overflow = 'auto'; 
-            }, 300); 
+        function closeBookingWizard() {
+            const modal = document.getElementById('booking-modal');
+            const container = document.getElementById('modal-container');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            container.classList.remove('scale-100'); container.classList.add('scale-95');
+            document.body.style.overflow = 'auto';
+            setTimeout(() => { activeServiceId = null; }, 300);
         }
 
-        function sendWhatsApp() {
-            const lang = document.getElementById('lang-switch').value;
-            const srv = translations[lang][`srv_${currentServiceId}_title`];
-            const msg = lang === 'id' 
-                ? `Halo Mangsit Youth Hub,%0A%0ASaya tertarik dengan layanan *${srv}*. Mohon informasi lebih lanjut. Terima kasih.`
-                : `Hello Mangsit Youth Hub,%0A%0AI am interested in the *${srv}* service. Could you provide more details? Thank you.`;
+        function updateWizardUI() {
+            if(!activeServiceId) return;
+            document.getElementById('wizard-service-title').textContent = translations[currentLang][`srv_${activeServiceId}_title`];
+            document.getElementById('addon-label-text').textContent = translations[currentLang][`addon_title_${activeServiceId}`];
+            document.getElementById('addon-price-label').textContent = '+ ' + formatCurr(serviceData[activeServiceId].addonIDR, currentCurr);
+            calculateLiveTotal(); // refresh price label
+        }
+
+        function calculateLiveTotal() {
+            if(!activeServiceId) return;
+            const data = serviceData[activeServiceId];
+            let totalIDR = 0;
+
+            if(data.type === 'route') {
+                totalIDR = parseFloat(document.getElementById('book-route').value);
+            } else {
+                const dur = parseInt(document.getElementById('book-duration').value) || 1;
+                totalIDR = data.baseIDR * dur;
+            }
+
+            if(document.getElementById('book-addon').checked) {
+                const dur = parseInt(document.getElementById('book-duration').value) || 1;
+                totalIDR += (data.addonIDR * (data.type === 'route' ? 1 : dur));
+            }
+
+            document.getElementById('summary-currency-label').textContent = currentCurr;
+            document.getElementById('wizard-total-display').textContent = formatCurr(totalIDR, currentCurr);
+        }
+
+        function submitBookingToWhatsApp() {
+            const dateStr = document.getElementById('book-date').value;
+            const hasAddon = document.getElementById('book-addon').checked;
+            const srvName = translations[currentLang][`srv_${activeServiceId}_title`];
+            const finalPrice = document.getElementById('wizard-total-display').textContent;
+            const type = serviceData[activeServiceId].type;
+
+            let detailSpec = "";
+            if(type === 'route') {
+                const routeSelect = document.getElementById('book-route');
+                const routeName = routeSelect.options[routeSelect.selectedIndex].getAttribute('data-name');
+                detailSpec = currentLang === 'id' ? `• *Rute:* ${routeName}` : `• *Route:* ${routeName}`;
+            } else {
+                const dur = document.getElementById('book-duration').value;
+                detailSpec = currentLang === 'id' ? `• *Durasi/Jumlah:* ${dur}` : `• *Duration/Qty:* ${dur}`;
+            }
+
+            let msg = "";
+            if (currentLang === 'id') {
+                msg = `Halo Mangsit Youth Hub,%0A%0ASaya ingin memesan layanan berikut:%0A` +
+                      `• *Layanan:* ${srvName}%0A` +
+                      `• *Tanggal:* ${dateStr}%0A` + detailSpec + `%0A` +
+                      `• *Ekstra Opsi:* ${hasAddon ? 'Ya' : 'Tidak'}%0A` +
+                      `• *Estimasi:* ${finalPrice} (${currentCurr})%0A%0A` +
+                      `Mohon info ketersediaan. Terima kasih!`;
+            } else {
+                msg = `Hello Mangsit Youth Hub,%0A%0AI would like to book:%0A` +
+                      `• *Service:* ${srvName}%0A` +
+                      `• *Date:* ${dateStr}%0A` + detailSpec + `%0A` +
+                      `• *Add-on:* ${hasAddon ? 'Yes' : 'No'}%0A` +
+                      `• *Estimate:* ${finalPrice} (${currentCurr})%0A%0A` +
+                      `Please let me know the availability. Thanks!`;
+            }
+
             window.open(`https://wa.me/${ADMIN_WA_NUMBER}?text=${msg}`, '_blank');
-            closeModal();
+            closeBookingWizard();
         }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => { changeLanguage('id'); changeCurrency('IDR'); });
     </script>
 </body>
 </html>
