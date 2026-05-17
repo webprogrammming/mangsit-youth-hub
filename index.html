@@ -8,14 +8,16 @@
     <meta name="google" content="notranslate" />
     
     <title>Mangsit Youth Hub - Local Services & Tourism in Senggigi</title>
+    <link rel="icon" type="image/png" href="img/Yout-Hub-Logo.png">
+
     <meta name="description" content="Mangsit Youth Hub adalah platform pemberdayaan lokal penyedia layanan sewa motor, surfboard, alat snorkeling, dan laundry di Mangsit, Senggigi." />
-    <meta name="keywords" content="sewa motor senggigi, surfboard mangsit, snorkeling lombok, laundry senggigi, mangsit youth hub" />
+    <meta name="keywords" content="sewa motor senggigi, surfboard mangsit, snorkeling lombok, laundry senggigi, mangsit youth hub, transport lombok" />
     <meta name="author" content="Mangsit Youth Hub" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.mangsityouthhub.com/" />
     <meta property="og:title" content="Mangsit Youth Hub - Senggigi Local Services" />
-    <meta property="og:description" content="Solusi lengkap liburan Anda di Senggigi. Sewa motor, papan selancar, dan layanan lokal terpercaya." />
+    <meta property="og:description" content="Solusi lengkap liburan Anda di Senggigi. Sewa motor, papan selancar, transport, dan layanan lokal terpercaya." />
     <meta property="og:image" content="img/banner.png" />
 
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -27,7 +29,6 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     
     <style>
-        /* 3. OPTIMALISASI CSS: Mencegah teks overlap & menghilangkan efek biru saat klik di HP */
         [data-i18n] {
             word-wrap: break-word;
             overflow-wrap: break-word;
@@ -211,7 +212,9 @@
     <section id="layanan" class="py-stack-lg max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop mt-8 scroll-mt-24">
         <h2 class="font-headline-lg text-3xl font-bold text-primary mb-stack-lg text-center" data-i18n="service_title">
             Layanan Presisi Pulau</h2>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+            
             <div onclick="openModal('1')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
                 <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 z-10 transition-colors"></div>
                 <div class="h-48 relative bg-gray-200" style="background-image: url('img/nmax.png'); background-size: cover; background-position: center;"></div>
@@ -259,21 +262,34 @@
                     <p class="font-body-md text-on-surface-variant text-sm line-clamp-2" data-i18n="srv_4_desc">Kain pantai premium dengan desain tropis, nyaman dan cepat kering.</p>
                 </div>
             </div>
+
+            <div onclick="openModal('5')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
+                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 z-10 transition-colors"></div>
+                <div class="h-48 relative bg-gray-200" style="background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80'); background-size: cover; background-position: center;"></div>
+                <div class="p-6 flex flex-col gap-2 flex-grow">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-headline-md text-xl font-bold text-on-surface" data-i18n="srv_5_title">Transportasi</h3>
+                        <span class="material-symbols-outlined text-primary">directions_car</span>
+                    </div>
+                    <p class="font-body-md text-on-surface-variant text-sm line-clamp-2" data-i18n="srv_5_desc">Layanan mobil & sopir untuk antar jemput bandara dan area Lombok.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <div id="service-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-4 py-8 bg-black/60 backdrop-blur-sm transition-opacity">
-        <div class="bg-surface rounded-2xl max-w-md w-full p-8 shadow-2xl relative flex flex-col items-center text-center">
+        <div class="bg-surface rounded-2xl max-w-md w-full p-8 shadow-2xl relative flex flex-col items-center text-left">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-on-surface-variant hover:text-secondary transition-colors" aria-label="Tutup Modal">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
 
-            <div class="mb-8 mt-2 flex flex-col items-center">
+            <div class="mb-8 mt-2 flex flex-col items-center w-full">
                 <div class="w-16 h-16 bg-surface-container-high rounded-full flex justify-center items-center text-primary mb-5 shadow-inner">
                     <span id="modal-icon" class="material-symbols-outlined text-4xl">info</span>
                 </div>
-                <h3 id="modal-title" class="font-headline-md text-2xl font-bold text-primary mb-3" data-i18n="srv_1_title">Judul Layanan</h3>
-                <p id="modal-desc" class="text-on-surface-variant text-base leading-relaxed" data-i18n="modal_desc_1">Deskripsi lengkap layanan akan muncul di sini.</p>
+                <h3 id="modal-title" class="font-headline-md text-2xl font-bold text-primary mb-3 text-center" data-i18n="srv_1_title">Judul Layanan</h3>
+                <p id="modal-desc" class="text-on-surface-variant text-sm leading-relaxed w-full" data-i18n="modal_desc_1">Deskripsi lengkap layanan akan muncul di sini.</p>
             </div>
 
             <button onclick="sendWhatsApp()" class="w-full bg-[#25D366] text-white font-bold px-6 py-4 rounded-xl shadow-md hover:bg-[#20b858] transition-all active:scale-95 flex items-center justify-center gap-2">
@@ -391,7 +407,7 @@
                         <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="srv_1_title">Sewa Motor</a>
                         <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="srv_2_title">Papan Selancar</a>
                         <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="srv_3_title">Perlengkapan Renang</a>
-                        <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="srv_4_title">Kain Pantai</a>
+                        <a class="hover:text-secondary transition-colors w-fit" href="#layanan" data-i18n="srv_5_title">Transportasi</a>
                     </div>
                 </div>
                 <div class="flex flex-col gap-4">
@@ -425,7 +441,6 @@
     </footer>
 
     <script>
-        // Toggle Mobile Menu
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -453,7 +468,6 @@
                 'trust_2': 'Perawatan Rutin',
                 'trust_3': 'Dukungan 24/7',
                 
-                // Tentang Kami
                 'about_title': 'Lebih dari Sekadar Layanan',
                 'about_desc_1': 'Mangsit Youth Hub adalah gerakan pemberdayaan ekonomi lokal berbasis teknologi. Lahir dari inisiatif pemuda Dusun Mangsit, kami hadir untuk mengangkat potensi para pelaku usaha jasa di lingkungan kami agar mampu beradaptasi, bersaing, dan menjangkau pasar global.',
                 'about_desc_2': 'Melalui platform ini, kami menjembatani Anda dengan layanan lokal yang otentik, aman, dan berkualitas tinggi. Setiap pesanan Anda bukanlah sekadar transaksi, melainkan dukungan langsung untuk menghidupkan perekonomian warga setempat dan mendorong digitalisasi pariwisata di Senggigi. Bersama, kita ciptakan pariwisata yang inklusif dan berkelanjutan.',
@@ -461,22 +475,26 @@
                 'service_title': 'Layanan Presisi Pulau',
                 'srv_1_title': 'Sewa Motor',
                 'srv_1_desc': 'Skuter handal, terawat, dan diantar langsung ke vila Anda.',
-                'srv_1_price': 'Mulai 75k/Hari',
+                
                 'srv_2_title': 'Papan Selancar',
                 'srv_2_desc': 'Papan premium untuk semua tingkat kemahiran di pantai.',
-                'srv_2_price': 'Mulai 50k/Sesi',
+                
                 'srv_3_title': 'Perlengkapan Renang',
                 'srv_3_desc': 'Masker sanitasi, sirip, dan pelampung untuk eksplorasi aman.',
-                'srv_3_price': 'Paket Lengkap',
+                
                 'srv_4_title': 'Kain Pantai',
                 'srv_4_desc': 'Kain pantai premium dengan desain tropis, nyaman dan cepat kering.',
-                'srv_4_price': 'Mulai 40k/Hari',
 
-                // Deskripsi Detail Modal
-                'modal_desc_1': 'Dapatkan skuter yang handal dan terawat dengan baik. Gratis biaya pengantaran dan penjemputan di area Senggigi. Sudah termasuk 2 helm standar SNI dan jas hujan.',
+                // Layanan Transportasi (Baru)
+                'srv_5_title': 'Transportasi',
+                'srv_5_desc': 'Layanan mobil & sopir untuk antar jemput bandara dan area Lombok.',
+
+                // Deskripsi Detail Modal (Menggunakan Tag HTML untuk Format Rapi)
+                'modal_desc_1': 'Dapatkan skuter handal dan terawat dengan baik. Gratis biaya pengantaran dan penjemputan di area Senggigi. Sudah termasuk 2 helm standar SNI dan jas hujan.',
                 'modal_desc_2': 'Tersedia berbagai ukuran papan selancar (Softboard & Hardboard) cocok untuk pemula hingga profesional. Kami dapat mengantarkannya langsung ke pantai tempat Anda berselancar.',
-                'modal_desc_3': 'Eksplorasi keindahan bawah laut dengan peralatan snorkeling kami yang disanitasi secara ketat. Tersedia paket masker, snorkel, dan sepatu katak (fins) berbagai ukuran.',
-                'modal_desc_4': 'Kain pantai berkualitas tinggi dengan bahan microfiber yang cepat kering dan tahan terhadap sinar matahari. Tersedia berbagai warna dan desain tropis. Sempurna untuk pantai, kolam renang, atau aktivitas outdoor lainnya.',
+                'modal_desc_3': 'Eksplorasi keindahan bawah laut dengan peralatan snorkeling kami yang disanitasi ketat. Tersedia paket masker, snorkel, dan sepatu katak (fins) berbagai ukuran.',
+                'modal_desc_4': 'Kain pantai berkualitas tinggi (microfiber) yang cepat kering dan tahan matahari. Tersedia warna dan desain tropis. Sempurna untuk pantai, kolam, atau aktivitas outdoor lainnya.',
+                'modal_desc_5': 'Harga per mobil (maks 4 pax). Sudah termasuk AC, sopir, BBM, dan parkir.<br><br><b>Rute Populer:</b><br>• Bandara ↔ Kuta Lombok: IDR 350k<br>• Bandara ↔ Senggigi: IDR 500k<br>• Bandara ↔ Bangsal: IDR 600k<br>• Senggigi ↔ Senaru: IDR 550k<br><br><b>Pilihan Armada:</b> Avanza, Innova Reborn, SUV, hingga Hiace/ELF.<br><br><i>Hubungi kami via WA untuk daftar harga rute lainnya!</i>',
                 
                 'form_submit': 'Pesan / Tanya via WhatsApp',
 
@@ -494,7 +512,6 @@
                 'btn_whatsapp': 'Chat WhatsApp',
                 'btn_map': 'Buka di Maps',
                 
-                // Footer
                 'footer_desc': 'Solusi lengkap liburan Anda di Senggigi. Kami menghubungkan Anda dengan layanan lokal terbaik berstandar profesional.',
                 'footer_quick_links': 'Tautan Cepat',
                 'footer_services': 'Layanan Kami',
@@ -512,7 +529,6 @@
                 'trust_2': 'Routine Maintenance',
                 'trust_3': '24/7 Support',
                 
-                // About Us
                 'about_title': 'More Than Just a Service',
                 'about_desc_1': 'Mangsit Youth Hub is a technology-driven movement for local economic empowerment. Born from the youth of Mangsit Village, our mission is to elevate local service providers, helping them adapt, thrive, and reach a global market.',
                 'about_desc_2': 'Through this platform, we bridge the gap between travelers and authentic, safe, and high-quality local services. Every booking you make is more than just a transaction—it is direct support that fuels the local economy and drives the digitalization of tourism in Senggigi. Together, we create an inclusive and sustainable tourism ecosystem.',
@@ -520,22 +536,26 @@
                 'service_title': 'Island Precision Services',
                 'srv_1_title': 'Motorbike Rental',
                 'srv_1_desc': 'Reliable, well-maintained scooters delivered directly to your villa.',
-                'srv_1_price': 'From 75k/Day',
+                
                 'srv_2_title': 'Surfboard Rental',
                 'srv_2_desc': 'Premium boards for all skill levels right at the beach.',
-                'srv_2_price': 'From 50k/Session',
+                
                 'srv_3_title': 'Snorkeling Gear',
                 'srv_3_desc': 'Sanitized masks, fins, and floaties for safe exploration.',
-                'srv_3_price': 'Full Package',
+                
                 'srv_4_title': 'Beach Towel Rental',
                 'srv_4_desc': 'Premium beach towels with tropical designs, comfortable and quick-drying.',
-                'srv_4_price': 'From 40k/Day',
 
-                // Deskripsi Detail Modal
+                // Layanan Transportasi (Baru) EN
+                'srv_5_title': 'Transport & Transfer',
+                'srv_5_desc': 'Car & driver service for airport/harbor transfers and area tours.',
+
+                // Deskripsi Detail Modal EN
                 'modal_desc_1': 'Get a reliable and well-maintained scooter. Free delivery and pick-up in the Senggigi area. Includes 2 SNI-standard helmets and raincoats.',
                 'modal_desc_2': 'Various surfboard sizes available (Softboards & Hardboards) suitable for beginners to professionals. We can deliver directly to your surfing spot.',
                 'modal_desc_3': 'Explore underwater beauty with our strictly sanitized snorkeling gear. Packages include mask, snorkel, and fins in multiple sizes.',
-                'modal_desc_4': 'High-quality beach towels made from microfiber material that dries quickly and resists sun damage. Available in various tropical colors and designs. Perfect for the beach, swimming pool, or other outdoor activities.',
+                'modal_desc_4': 'High-quality beach towels made from microfiber material that dries quickly and resists sun damage. Available in various tropical colors and designs. Perfect for the beach or pool.',
+                'modal_desc_5': 'Price per car (max 4 pax). Includes AC, driver, fuel, and parking.<br><br><b>Popular Routes:</b><br>• Airport ↔ Kuta Lombok: IDR 350k<br>• Airport ↔ Senggigi: IDR 500k<br>• Airport ↔ Bangsal Harbor: IDR 600k<br>• Senggigi ↔ Senaru: IDR 550k<br><br><b>Vehicle Options:</b> Avanza, Innova Reborn, SUVs, to Hiace/ELF.<br><br><i>Contact us via WA for other routes and full pricing!</i>',
                 
                 'form_submit': 'Ask / Book via WhatsApp',
 
@@ -553,7 +573,6 @@
                 'btn_whatsapp': 'Chat WhatsApp',
                 'btn_map': 'Open in Maps',
                 
-                // Footer
                 'footer_desc': 'Your complete holiday solution in Senggigi. We connect you with the best local services with professional standards.',
                 'footer_quick_links': 'Quick Links',
                 'footer_services': 'Our Services',
@@ -561,41 +580,33 @@
             }
         };
 
-        // ==========================================
-        // Fungsi Mengubah Bahasa & Simpan ke LocalStorage
-        // ==========================================
         function changeLanguage(lang) {
             document.getElementById('lang-switch').value = lang;
             document.getElementById('lang-switch-mobile').value = lang;
-            document.documentElement.lang = lang; // Update atribut HTML lang
+            document.documentElement.lang = lang; 
 
-            // Simpan preferensi bahasa ke Local Storage
             localStorage.setItem('preferredLanguage', lang);
 
             const elements = document.querySelectorAll('[data-i18n]');
             elements.forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
+                    // PENTING: Diubah menjadi innerHTML agar format <b> dan <br> pada teks rute transport bisa terbaca!
+                    el.innerHTML = translations[lang][key];
                 }
             });
             
-            // Update teks modal secara realtime jika modal sedang terbuka
             if (currentServiceId && !document.getElementById('service-modal').classList.contains('hidden')) {
-                document.getElementById('modal-title').textContent = translations[lang][`srv_${currentServiceId}_title`];
-                document.getElementById('modal-desc').textContent = translations[lang][`modal_desc_${currentServiceId}`];
+                document.getElementById('modal-title').innerHTML = translations[lang][`srv_${currentServiceId}_title`];
+                document.getElementById('modal-desc').innerHTML = translations[lang][`modal_desc_${currentServiceId}`];
             }
         }
 
-        // Cek LocalStorage saat halaman pertama kali dimuat
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferredLanguage') || 'id'; // Default ke ID jika belum ada
+            const savedLang = localStorage.getItem('preferredLanguage') || 'id';
             changeLanguage(savedLang);
         });
 
-        // ==========================================
-        // FITUR MODAL & PEMESANAN WHATSAPP
-        // ==========================================
         let currentServiceId = '';
         const ADMIN_WA_NUMBER = '6285959202456'; 
 
@@ -610,14 +621,15 @@
             modalTitle.setAttribute('data-i18n', `srv_${serviceId}_title`);
             modalDesc.setAttribute('data-i18n', `modal_desc_${serviceId}`);
 
-            modalTitle.textContent = translations[currentLang][`srv_${serviceId}_title`];
-            modalDesc.textContent = translations[currentLang][`modal_desc_${serviceId}`];
+            modalTitle.innerHTML = translations[currentLang][`srv_${serviceId}_title`];
+            modalDesc.innerHTML = translations[currentLang][`modal_desc_${serviceId}`];
 
             const icons = {
                 '1': 'two_wheeler',
                 '2': 'surfing',
                 '3': 'scuba_diving',
-                '4': 'beach_access'
+                '4': 'beach_access',
+                '5': 'directions_car' // Icon untuk transportasi
             };
             modalIcon.textContent = icons[serviceId] || 'info';
 
