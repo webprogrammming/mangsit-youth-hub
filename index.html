@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="img/Yout-Hub-Logo.png">
 
     <meta name="description" content="Mangsit Youth Hub adalah platform pemberdayaan lokal penyedia layanan sewa motor, surfboard, alat snorkeling, dan laundry di Mangsit, Senggigi." />
-    <meta name="keywords" content="sewa motor senggigi, surfboard mangsit, snorkeling lombok, laundry senggigi, mangsit youth hub, transport lombok" />
+    <meta name="keywords" content="sewa motor senggigi, surfboard mangsit, snorkeling lombok, transport lombok, mangsit youth hub" />
     <meta name="author" content="Mangsit Youth Hub" />
 
     <meta property="og:type" content="website" />
@@ -48,6 +48,15 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+        
+        /* Custom Scrollbar untuk Modal Transportasi */
+        #modal-content-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        #modal-content-container::-webkit-scrollbar-thumb {
+            background-color: #c2c7ce;
+            border-radius: 10px;
+        }
     </style>
 
     <script id="tailwind-config">
@@ -69,24 +78,6 @@
                         "on-primary": "#ffffff",
                         "tertiary-container": "#473500",
                         "on-tertiary-container": "#c69b14"
-                    },
-                    "spacing": {
-                        "container-margin-desktop": "80px",
-                        "container-margin-mobile": "20px",
-                        "stack-lg": "48px",
-                        "stack-md": "24px",
-                        "stack-sm": "12px",
-                        "gutter": "24px"
-                    },
-                    "fontFamily": {
-                        "headline-xl": ["Plus Jakarta Sans"],
-                        "headline-lg-mobile": ["Plus Jakarta Sans"],
-                        "headline-lg": ["Plus Jakarta Sans"],
-                        "headline-md": ["Plus Jakarta Sans"],
-                        "body-lg": ["Be Vietnam Pro"],
-                        "body-md": ["Be Vietnam Pro"],
-                        "label-md": ["Be Vietnam Pro"],
-                        "label-sm": ["Be Vietnam Pro"]
                     }
                 }
             }
@@ -96,13 +87,13 @@
 
 <body class="bg-background text-on-background antialiased" onload="document.documentElement.classList.add('loaded')">
     <nav class="bg-background/90 w-full top-0 sticky backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop flex justify-between items-center h-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-20 flex justify-between items-center h-20">
             <a href="index.html" class="flex items-center gap-3 font-headline-md text-xl md:text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
                 <img src="img/Yout-Hub-Logo.png" alt="Mangsit Youth Logo" class="h-10 md:h-12 w-auto object-contain" loading="eager" />
                 Mangsit Youth Hub
             </a>
 
-            <div class="hidden md:flex items-center gap-gutter font-body-md text-sm font-semibold">
+            <div class="hidden md:flex items-center gap-8 font-body-md text-sm font-semibold">
                 <a class="text-on-surface-variant hover:text-primary transition-all duration-300" href="#layanan" data-i18n="nav_services">Layanan</a>
                 <a class="text-on-surface-variant hover:text-primary transition-all duration-300" href="#tentang" data-i18n="nav_about">Tentang Kami</a>
                 <a class="text-on-surface-variant hover:text-primary transition-all duration-300" href="#pemesanan" data-i18n="nav_booking">Pemesanan</a>
@@ -145,7 +136,7 @@
     <header class="relative w-full h-[70vh] min-h-[500px] flex items-center bg-surface-container-high"
         style="background-image: url('img/Mangsit Youth Hub Services Banner.png'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30"></div>
-        <div class="relative z-10 w-full max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop flex flex-col items-start gap-stack-md text-white">
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-20 flex flex-col items-start gap-6 text-white">
             <h1 class="font-headline-lg-mobile text-3xl md:text-5xl font-extrabold max-w-3xl text-on-primary leading-tight" data-i18n="hero_title">
                 Mangsit Youth Hub - Solusi Lengkap Liburan Anda di Senggigi.
             </h1>
@@ -176,7 +167,7 @@
         </div>
     </div>
 
-    <section id="tentang" class="py-stack-lg max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop mt-16 scroll-mt-24">
+    <section id="tentang" class="py-12 max-w-7xl mx-auto px-6 md:px-20 mt-16 scroll-mt-24">
         <div class="flex flex-col md:flex-row gap-12 items-center">
             <div class="w-full md:w-1/2 relative">
                 <div class="absolute -inset-4 bg-primary/5 rounded-3xl transform rotate-2 -z-10"></div>
@@ -209,11 +200,11 @@
         </div>
     </section>
 
-    <section id="layanan" class="py-stack-lg max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop mt-8 scroll-mt-24">
-        <h2 class="font-headline-lg text-3xl font-bold text-primary mb-stack-lg text-center" data-i18n="service_title">
+    <section id="layanan" class="py-12 max-w-7xl mx-auto px-6 md:px-20 mt-8 scroll-mt-24">
+        <h2 class="font-headline-lg text-3xl font-bold text-primary mb-12 text-center" data-i18n="service_title">
             Layanan Presisi Pulau</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             <div onclick="openModal('1')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
                 <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 z-10 transition-colors"></div>
@@ -263,15 +254,15 @@
                 </div>
             </div>
 
-            <div onclick="openModal('5')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-xl transition-all group cursor-pointer relative">
+            <div onclick="openModal('5')" class="bg-surface rounded-xl border border-outline-variant/50 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-xl transition-all group cursor-pointer relative lg:col-span-2">
                 <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 z-10 transition-colors"></div>
                 <div class="h-48 relative bg-gray-200" style="background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80'); background-size: cover; background-position: center;"></div>
                 <div class="p-6 flex flex-col gap-2 flex-grow">
                     <div class="flex items-center justify-between">
-                        <h3 class="font-headline-md text-xl font-bold text-on-surface" data-i18n="srv_5_title">Transportasi</h3>
+                        <h3 class="font-headline-md text-xl font-bold text-on-surface" data-i18n="srv_5_title">Transportasi Wisata & Antar Jemput</h3>
                         <span class="material-symbols-outlined text-primary">directions_car</span>
                     </div>
-                    <p class="font-body-md text-on-surface-variant text-sm line-clamp-2" data-i18n="srv_5_desc">Layanan mobil & sopir untuk antar jemput bandara dan area Lombok.</p>
+                    <p class="font-body-md text-on-surface-variant text-sm line-clamp-2" data-i18n="srv_5_desc">Layanan mobil & sopir untuk antar jemput bandara dan area wisata Lombok.</p>
                 </div>
             </div>
 
@@ -279,20 +270,22 @@
     </section>
 
     <div id="service-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-4 py-8 bg-black/60 backdrop-blur-sm transition-opacity">
-        <div class="bg-surface rounded-2xl max-w-md w-full p-8 shadow-2xl relative flex flex-col items-center text-left">
+        <div id="modal-content-container" class="bg-surface rounded-2xl max-w-md w-full p-6 md:p-8 shadow-2xl relative flex flex-col items-center text-left max-h-[90vh] overflow-y-auto">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-on-surface-variant hover:text-secondary transition-colors" aria-label="Tutup Modal">
-                <span class="material-symbols-outlined text-3xl">close</span>
+                <span class="material-symbols-outlined text-3xl bg-white rounded-full">close</span>
             </button>
 
             <div class="mb-8 mt-2 flex flex-col items-center w-full">
                 <div class="w-16 h-16 bg-surface-container-high rounded-full flex justify-center items-center text-primary mb-5 shadow-inner">
                     <span id="modal-icon" class="material-symbols-outlined text-4xl">info</span>
                 </div>
-                <h3 id="modal-title" class="font-headline-md text-2xl font-bold text-primary mb-3 text-center" data-i18n="srv_1_title">Judul Layanan</h3>
-                <p id="modal-desc" class="text-on-surface-variant text-sm leading-relaxed w-full" data-i18n="modal_desc_1">Deskripsi lengkap layanan akan muncul di sini.</p>
+                <h3 id="modal-title" class="font-headline-md text-2xl font-bold text-primary mb-5 text-center" data-i18n="srv_1_title">Judul Layanan</h3>
+                <div id="modal-desc" class="text-on-surface-variant text-sm leading-relaxed w-full" data-i18n="modal_desc_1">
+                    Deskripsi lengkap layanan akan muncul di sini.
+                </div>
             </div>
 
-            <button onclick="sendWhatsApp()" class="w-full bg-[#25D366] text-white font-bold px-6 py-4 rounded-xl shadow-md hover:bg-[#20b858] transition-all active:scale-95 flex items-center justify-center gap-2">
+            <button onclick="sendWhatsApp()" class="w-full bg-[#25D366] text-white font-bold px-6 py-4 rounded-xl shadow-md hover:bg-[#20b858] transition-all active:scale-95 flex items-center justify-center gap-2 mt-auto sticky bottom-0">
                 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
                 <span data-i18n="form_submit">Pesan / Tanya via WhatsApp</span>
             </button>
@@ -300,8 +293,8 @@
         <div onclick="closeModal()" class="absolute inset-0 -z-10"></div>
     </div>
 
-    <section id="pemesanan" class="bg-surface-container-low py-stack-lg border-y border-outline-variant/30 scroll-mt-20 mt-12">
-        <div class="max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop">
+    <section id="pemesanan" class="bg-surface-container-low py-12 border-y border-outline-variant/30 scroll-mt-20 mt-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-20">
             <h2 class="font-headline-lg text-3xl font-bold text-primary text-center mb-10" data-i18n="process_title">Prosedur Pemesanan Mudah</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="flex flex-col items-center gap-4 bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant/20 h-full">
@@ -326,16 +319,10 @@
                     <p class="text-sm text-on-surface-variant" data-i18n="proc_3_desc">Barang diantar tepat waktu dalam kondisi prima ke lokasi Anda. Nikmati liburan Anda.</p>
                 </div>
             </div>
-            <div class="mt-12 flex justify-center">
-                <a href="#layanan" class="bg-primary text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-primary/90 transition-all active:scale-95 flex items-center gap-2">
-                    <span data-i18n="btn_book_now">Pesan Sekarang</span>
-                    <span class="material-symbols-outlined">calendar_month</span>
-                </a>
-            </div>
         </div>
     </section>
 
-    <section id="kontak" class="py-stack-lg max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop scroll-mt-20">
+    <section id="kontak" class="py-12 max-w-7xl mx-auto px-6 md:px-20 scroll-mt-20">
         <h2 class="font-headline-lg text-3xl font-bold text-primary mb-8 text-center" data-i18n="contact_title">Hubungi Kami</h2>
         <div class="bg-surface rounded-2xl shadow-sm border border-outline-variant/30 overflow-hidden flex flex-col md:flex-row">
             <div class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center gap-6">
@@ -382,15 +369,11 @@
     </section>
 
     <footer class="bg-primary text-white w-full pt-16 pb-8 mt-20 border-t-4 border-secondary">
-        <div class="max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop">
+        <div class="max-w-7xl mx-auto px-6 md:px-20">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
                 <div class="flex flex-col gap-4">
                     <div class="font-headline-md text-2xl font-bold text-white">Mangsit Youth Hub</div>
                     <p class="text-sm text-gray-300 leading-relaxed" data-i18n="footer_desc">Solusi lengkap liburan Anda di Senggigi. Kami menghubungkan Anda dengan layanan lokal terbaik berstandar profesional.</p>
-                    <div class="flex gap-4 mt-2">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><span class="material-symbols-outlined text-sm">photo_camera</span> </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><span class="material-symbols-outlined text-sm">language</span></a>
-                    </div>
                 </div>
                 <div class="flex flex-col gap-4 lg:pl-8">
                     <h4 class="font-bold text-lg text-white" data-i18n="footer_quick_links">Tautan Cepat</h4>
@@ -415,7 +398,7 @@
                     <div class="flex flex-col gap-3 text-sm text-gray-300">
                         <div class="flex items-start gap-3">
                             <span class="material-symbols-outlined text-secondary text-xl">location_on</span>
-                            <span>Jl. Raya Senggigi, Mangsit, Lombok Barat, NTB</span>
+                            <span>Jl. Raya Senggigi, Mangsit, NTB</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="material-symbols-outlined text-secondary text-xl">mail</span>
@@ -429,7 +412,6 @@
                 </div>
             </div>
             <hr class="border-gray-600 mb-6" />
-            
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
                 <div class="text-center md:text-left">© 2024 Mangsit Youth Hub. Island Precision, Local Heart.</div>
                 <div class="flex gap-6">
@@ -454,7 +436,9 @@
             });
         });
 
-        // Kamus Bahasa (i18n)
+        // ==========================================
+        // KAMUS BAHASA (HTML FORMAT TERMASUK UNTUK MODAL)
+        // ==========================================
         const translations = {
             'id': {
                 'nav_services': 'Layanan',
@@ -485,19 +469,58 @@
                 'srv_4_title': 'Kain Pantai',
                 'srv_4_desc': 'Kain pantai premium dengan desain tropis, nyaman dan cepat kering.',
 
-                // Layanan Transportasi (Baru)
-                'srv_5_title': 'Transportasi',
-                'srv_5_desc': 'Layanan mobil & sopir untuk antar jemput bandara dan area Lombok.',
+                'srv_5_title': 'Transportasi Wisata',
+                'srv_5_desc': 'Layanan mobil & sopir untuk antar jemput bandara dan area wisata Lombok.',
 
-                // Deskripsi Detail Modal (Menggunakan Tag HTML untuk Format Rapi)
-                'modal_desc_1': 'Dapatkan skuter handal dan terawat dengan baik. Gratis biaya pengantaran dan penjemputan di area Senggigi. Sudah termasuk 2 helm standar SNI dan jas hujan.',
-                'modal_desc_2': 'Tersedia berbagai ukuran papan selancar (Softboard & Hardboard) cocok untuk pemula hingga profesional. Kami dapat mengantarkannya langsung ke pantai tempat Anda berselancar.',
-                'modal_desc_3': 'Eksplorasi keindahan bawah laut dengan peralatan snorkeling kami yang disanitasi ketat. Tersedia paket masker, snorkel, dan sepatu katak (fins) berbagai ukuran.',
-                'modal_desc_4': 'Kain pantai berkualitas tinggi (microfiber) yang cepat kering dan tahan matahari. Tersedia warna dan desain tropis. Sempurna untuk pantai, kolam, atau aktivitas outdoor lainnya.',
-                'modal_desc_5': 'Harga per mobil (maks 4 pax). Sudah termasuk AC, sopir, BBM, dan parkir.<br><br><b>Rute Populer:</b><br>• Bandara ↔ Kuta Lombok: IDR 350k<br>• Bandara ↔ Senggigi: IDR 500k<br>• Bandara ↔ Bangsal: IDR 600k<br>• Senggigi ↔ Senaru: IDR 550k<br><br><b>Pilihan Armada:</b> Avanza, Innova Reborn, SUV, hingga Hiace/ELF.<br><br><i>Hubungi kami via WA untuk daftar harga rute lainnya!</i>',
+                // Deskripsi Detail Modal
+                'modal_desc_1': '<div class="text-center">Dapatkan skuter handal dan terawat dengan baik. Gratis biaya pengantaran dan penjemputan di area Senggigi. Sudah termasuk 2 helm standar SNI dan jas hujan.</div>',
+                'modal_desc_2': '<div class="text-center">Tersedia berbagai ukuran papan selancar (Softboard & Hardboard) cocok untuk pemula hingga profesional. Kami dapat mengantarkannya langsung ke pantai tempat Anda berselancar.</div>',
+                'modal_desc_3': '<div class="text-center">Eksplorasi keindahan bawah laut dengan peralatan snorkeling kami yang disanitasi ketat. Tersedia paket masker, snorkel, dan sepatu katak (fins) berbagai ukuran.</div>',
+                'modal_desc_4': '<div class="text-center">Kain pantai berkualitas tinggi (microfiber) yang cepat kering dan tahan matahari. Tersedia warna dan desain tropis. Sempurna untuk pantai, kolam, atau aktivitas outdoor lainnya.</div>',
+                
+                // Modal Deskripsi 5 (Transportasi) - Menggunakan list dan format rapi
+                'modal_desc_5': `
+                    <div class="text-left w-full text-sm">
+                        <p class="mb-4 text-on-surface">Harga berlaku per kendaraan <b>(maksimum 4 penumpang)</b> dan sudah termasuk <b>sopir, bahan bakar, serta parkir</b>. Armada dilengkapi AC dingin, kursi empuk, dan bagasi luas.</p>
+                        
+                        <h4 class="font-bold text-primary mt-4 mb-2">1. Antar Jemput Bandara Lombok</h4>
+                        <ul class="list-disc pl-5 mb-4 space-y-1 text-on-surface-variant">
+                            <li>Bandara ↔ Senaru (±3,5 jam): <b>IDR 700.000</b></li>
+                            <li>Bandara ↔ Sembalun (±4 jam): <b>IDR 800.000</b></li>
+                            <li>Bandara ↔ Bangsal (±2 jam): <b>IDR 600.000</b></li>
+                            <li>Bandara ↔ Senggigi (±1,5 jam): <b>IDR 500.000</b></li>
+                            <li>Bandara ↔ Tetebatu (±3 jam): <b>IDR 550.000</b></li>
+                            <li>Bandara ↔ Kuta Lombok (±45 mnt): <b>IDR 350.000</b></li>
+                        </ul>
+
+                        <h4 class="font-bold text-primary mt-4 mb-2">2. Transfer Antar Area Wisata</h4>
+                        <ul class="list-disc pl-5 mb-4 space-y-1 text-on-surface-variant">
+                            <li>Senggigi / Mataram ↔ Senaru (±2 jam): <b>IDR 550.000</b></li>
+                            <li>Kuta ↔ Senaru (±4 jam): <b>IDR 700.000</b></li>
+                            <li>Tetebatu ↔ Senaru (±3 jam): <b>IDR 600.000</b></li>
+                            <li>Bangsal ↔ Senaru (±2 jam): <b>IDR 500.000</b></li>
+                            <li>Senggigi ↔ Kuta Lombok (±3 jam): <b>IDR 550.000</b></li>
+                        </ul>
+
+                        <h4 class="font-bold text-primary mt-4 mb-2">3. Pelabuhan & Gili Islands</h4>
+                        <ul class="list-disc pl-5 mb-4 space-y-1 text-on-surface-variant">
+                            <li>Pel. Lembar ↔ Senaru (±3 jam): <b>IDR 600.000</b></li>
+                            <li>Pel. Kayangan ↔ Senaru (±1,5 jam): <b>IDR 400.000</b></li>
+                            <li>Gili ↔ Senaru (Boat+Mobil, ±2,5 jam): <b>IDR 850.000</b></li>
+                            <li>Gili ↔ Sembalun (±3 jam): <b>IDR 900.000</b></li>
+                        </ul>
+
+                        <h4 class="font-bold text-primary mt-4 mb-2">Pilihan Armada</h4>
+                        <ul class="list-disc pl-5 mb-2 space-y-1 text-on-surface-variant">
+                            <li><b>Avanza/Ertiga:</b> 1–4 org (Pasangan & Keluarga Kecil)</li>
+                            <li><b>Innova Reborn:</b> 1–5 org (Keluarga dgn bagasi besar)</li>
+                            <li><b>SUV (Rush/XL7):</b> 1–4 org (Lintas area jauh)</li>
+                            <li><b>Hiace/ELF:</b> 6–12 org (Grup tur & Rombongan)</li>
+                            <li><b>Bus Medium:</b> s.d 20 org (Grup besar / Outing)</li>
+                        </ul>
+                    </div>`,
                 
                 'form_submit': 'Pesan / Tanya via WhatsApp',
-
                 'process_title': 'Prosedur Pemesanan Mudah',
                 'proc_1_title': '1. Pilih / Pesan',
                 'proc_1_desc': 'Pilih layanan yang Anda inginkan dan hubungi kami melalui WhatsApp.',
@@ -546,19 +569,56 @@
                 'srv_4_title': 'Beach Towel Rental',
                 'srv_4_desc': 'Premium beach towels with tropical designs, comfortable and quick-drying.',
 
-                // Layanan Transportasi (Baru) EN
                 'srv_5_title': 'Transport & Transfer',
                 'srv_5_desc': 'Car & driver service for airport/harbor transfers and area tours.',
 
-                // Deskripsi Detail Modal EN
-                'modal_desc_1': 'Get a reliable and well-maintained scooter. Free delivery and pick-up in the Senggigi area. Includes 2 SNI-standard helmets and raincoats.',
-                'modal_desc_2': 'Various surfboard sizes available (Softboards & Hardboards) suitable for beginners to professionals. We can deliver directly to your surfing spot.',
-                'modal_desc_3': 'Explore underwater beauty with our strictly sanitized snorkeling gear. Packages include mask, snorkel, and fins in multiple sizes.',
-                'modal_desc_4': 'High-quality beach towels made from microfiber material that dries quickly and resists sun damage. Available in various tropical colors and designs. Perfect for the beach or pool.',
-                'modal_desc_5': 'Price per car (max 4 pax). Includes AC, driver, fuel, and parking.<br><br><b>Popular Routes:</b><br>• Airport ↔ Kuta Lombok: IDR 350k<br>• Airport ↔ Senggigi: IDR 500k<br>• Airport ↔ Bangsal Harbor: IDR 600k<br>• Senggigi ↔ Senaru: IDR 550k<br><br><b>Vehicle Options:</b> Avanza, Innova Reborn, SUVs, to Hiace/ELF.<br><br><i>Contact us via WA for other routes and full pricing!</i>',
+                'modal_desc_1': '<div class="text-center">Get a reliable and well-maintained scooter. Free delivery and pick-up in the Senggigi area. Includes 2 SNI-standard helmets and raincoats.</div>',
+                'modal_desc_2': '<div class="text-center">Various surfboard sizes available (Softboards & Hardboards) suitable for beginners to professionals. We can deliver directly to your surfing spot.</div>',
+                'modal_desc_3': '<div class="text-center">Explore underwater beauty with our strictly sanitized snorkeling gear. Packages include mask, snorkel, and fins in multiple sizes.</div>',
+                'modal_desc_4': '<div class="text-center">High-quality beach towels made from microfiber material that dries quickly and resists sun damage. Available in various tropical colors and designs.</div>',
+                
+                'modal_desc_5': `
+                    <div class="text-left w-full text-sm">
+                        <p class="mb-4 text-on-surface">Prices apply per vehicle <b>(maximum 4 passengers)</b> and include <b>driver, fuel, and parking</b>. Our vehicles are equipped with cold AC, comfortable seats, and spacious luggage.</p>
+                        
+                        <h4 class="font-bold text-primary mt-4 mb-2">1. Lombok Airport Transfers</h4>
+                        <ul class="list-disc pl-5 mb-4 space-y-1 text-on-surface-variant">
+                            <li>Airport ↔ Senaru (±3.5 hrs): <b>IDR 700,000</b></li>
+                            <li>Airport ↔ Sembalun (±4 hrs): <b>IDR 800,000</b></li>
+                            <li>Airport ↔ Bangsal (±2 hrs): <b>IDR 600,000</b></li>
+                            <li>Airport ↔ Senggigi (±1.5 hrs): <b>IDR 500,000</b></li>
+                            <li>Airport ↔ Tetebatu (±3 hrs): <b>IDR 550,000</b></li>
+                            <li>Airport ↔ Kuta Lombok (±45 mins): <b>IDR 350,000</b></li>
+                        </ul>
+
+                        <h4 class="font-bold text-primary mt-4 mb-2">2. Tourist Area Transfers</h4>
+                        <ul class="list-disc pl-5 mb-4 space-y-1 text-on-surface-variant">
+                            <li>Senggigi / Mataram ↔ Senaru (±2 hrs): <b>IDR 550,000</b></li>
+                            <li>Kuta ↔ Senaru (±4 hrs): <b>IDR 700,000</b></li>
+                            <li>Tetebatu ↔ Senaru (±3 hrs): <b>IDR 600,000</b></li>
+                            <li>Bangsal ↔ Senaru (±2 hrs): <b>IDR 500,000</b></li>
+                            <li>Senggigi ↔ Kuta Lombok (±3 hrs): <b>IDR 550,000</b></li>
+                        </ul>
+
+                        <h4 class="font-bold text-primary mt-4 mb-2">3. Harbor & Gili Islands</h4>
+                        <ul class="list-disc pl-5 mb-4 space-y-1 text-on-surface-variant">
+                            <li>Lembar Harbor ↔ Senaru (±3 hrs): <b>IDR 600,000</b></li>
+                            <li>Kayangan Harbor ↔ Senaru (±1.5 hrs): <b>IDR 400,000</b></li>
+                            <li>Gili Islands ↔ Senaru (Boat+Car, ±2.5 hrs): <b>IDR 850,000</b></li>
+                            <li>Gili Islands ↔ Sembalun (±3 hrs): <b>IDR 900,000</b></li>
+                        </ul>
+
+                        <h4 class="font-bold text-primary mt-4 mb-2">Vehicle Options</h4>
+                        <ul class="list-disc pl-5 mb-2 space-y-1 text-on-surface-variant">
+                            <li><b>Avanza/Ertiga:</b> 1–4 pax (Couples/Small Families)</li>
+                            <li><b>Innova Reborn:</b> 1–5 pax (Families w/ large luggage)</li>
+                            <li><b>SUV (Rush/XL7):</b> 1–4 pax (Long trips)</li>
+                            <li><b>Hiace/ELF:</b> 6–12 pax (Tour groups)</li>
+                            <li><b>Medium Bus:</b> up to 20 pax (Large groups)</li>
+                        </ul>
+                    </div>`,
                 
                 'form_submit': 'Ask / Book via WhatsApp',
-
                 'process_title': 'Effortless Booking Process',
                 'proc_1_title': '1. Choose / Order',
                 'proc_1_desc': 'Select the service you want and contact us via WhatsApp.',
@@ -572,7 +632,6 @@
                 'contact_desc': 'Have specific questions or want to consult about your itinerary? Our team is ready to reply to your message.',
                 'btn_whatsapp': 'Chat WhatsApp',
                 'btn_map': 'Open in Maps',
-                
                 'footer_desc': 'Your complete holiday solution in Senggigi. We connect you with the best local services with professional standards.',
                 'footer_quick_links': 'Quick Links',
                 'footer_services': 'Our Services',
@@ -591,7 +650,7 @@
             elements.forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
-                    // PENTING: Diubah menjadi innerHTML agar format <b> dan <br> pada teks rute transport bisa terbaca!
+                    // PENTING: Menggunakan innerHTML agar tag list HTML dari data transport terbaca dengan baik
                     el.innerHTML = translations[lang][key];
                 }
             });
@@ -617,10 +676,11 @@
             const modalTitle = document.getElementById('modal-title');
             const modalDesc = document.getElementById('modal-desc');
             const modalIcon = document.getElementById('modal-icon');
+            const modalContainer = document.getElementById('modal-content-container');
 
+            // Set Data
             modalTitle.setAttribute('data-i18n', `srv_${serviceId}_title`);
             modalDesc.setAttribute('data-i18n', `modal_desc_${serviceId}`);
-
             modalTitle.innerHTML = translations[currentLang][`srv_${serviceId}_title`];
             modalDesc.innerHTML = translations[currentLang][`modal_desc_${serviceId}`];
 
@@ -629,9 +689,20 @@
                 '2': 'surfing',
                 '3': 'scuba_diving',
                 '4': 'beach_access',
-                '5': 'directions_car' // Icon untuk transportasi
+                '5': 'directions_car' 
             };
             modalIcon.textContent = icons[serviceId] || 'info';
+
+            // ATUR UKURAN MODAL DINAMIS
+            // Jika ID = 5 (Transport), gunakan max-w-2xl agar lebih lebar
+            if (serviceId === '5') {
+                modalContainer.classList.remove('max-w-md');
+                modalContainer.classList.add('max-w-2xl');
+            } else {
+                // Untuk modal 1-4, kembalikan ke ukuran standar max-w-md
+                modalContainer.classList.remove('max-w-2xl');
+                modalContainer.classList.add('max-w-md');
+            }
 
             document.getElementById('service-modal').classList.remove('hidden');
             document.body.style.overflow = 'hidden'; 
